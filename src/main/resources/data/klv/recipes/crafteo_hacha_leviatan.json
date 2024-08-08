@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "klv:hacha_nordica"
+  },
+  "addition": {
+    "item": "klv:esencia_de_ragnarok"
+  },
+  "result": {
+    "item": "klv:hacha_leviatan"
+  }
+}

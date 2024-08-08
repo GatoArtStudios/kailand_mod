@@ -1,0 +1,36 @@
+{
+  "display": {
+    "icon": {
+      "item": "klv:corazon_del_warden"
+    },
+    "title": {
+      "translate": "advancements.corazon_de_warden_logro.title"
+    },
+    "description": {
+      "translate": "advancements.corazon_de_warden_logro.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "corazon_de_warden_logro": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "klv:corazon_del_warden"
+            ],
+            "count": {
+              "min": 1,
+              "max": 64
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "klv:logro_moneda"
+}

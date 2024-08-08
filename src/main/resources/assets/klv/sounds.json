@@ -1,0 +1,45 @@
+{
+  "katanasound": {
+    "subtitle": "subtitles.katanasound",
+    "sounds": [
+      {
+        "name": "klv:y2mate.com_-_efecto_de_sonido_de_katana",
+        "stream": false
+      }
+    ]
+  },
+  "lanzarmjonlir": {
+    "subtitle": "subtitles.lanzarmjonlir",
+    "sounds": [
+      {
+        "name": "klv:throw",
+        "stream": false
+      }
+    ]
+  },
+  "lanzarmartillothor": {
+    "sounds": [
+      {
+        "name": "klv:throw1",
+        "stream": false
+      }
+    ]
+  },
+  "impactomjonlir1": {
+    "subtitle": "subtitles.impactomjonlir1",
+    "sounds": [
+      {
+        "name": "klv:ground_impact1",
+        "stream": false
+      }
+    ]
+  },
+  "mjonlirpiercesound1": {
+    "sounds": [
+      {
+        "name": "klv:pierce1",
+        "stream": false
+      }
+    ]
+  }
+}

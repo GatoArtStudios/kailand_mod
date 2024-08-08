@@ -1,0 +1,64 @@
+{
+  "_fv": 43,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 170,
+    "height": 178,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "button",
+        "data": {
+          "name": "button_inmortalidad_por_5_minutos",
+          "text": "Dios por 5 minutos",
+          "onClick": {
+            "name": "ModoDios5minutos"
+          },
+          "width": 160,
+          "height": 20,
+          "x": 132,
+          "y": 36
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_noche",
+          "text": "Noche",
+          "onClick": {
+            "name": "Noche"
+          },
+          "width": 51,
+          "height": 20,
+          "x": 212,
+          "y": 60
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_diaaaa",
+          "text": "Día",
+          "onClick": {
+            "name": "Dia"
+          },
+          "width": 56,
+          "height": 20,
+          "x": 154,
+          "y": 60
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 4,
+      "sy": 8,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": true
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "_fv": 43,
+  "_type": "potion",
+  "definition": {
+    "potionName": "Pocion de Regreso",
+    "splashName": "Pocion de Regreso arrojadiza",
+    "lingeringName": "Pocion de Regreso Persistente",
+    "arrowName": "Flecha de Pocion de Regreso",
+    "effects": [
+      {
+        "effect": {
+          "value": "CUSTOM:TeleportEffect"
+        },
+        "duration": 1,
+        "amplifier": 0,
+        "ambient": true,
+        "showParticles": true
+      }
+    ]
+  }
+}

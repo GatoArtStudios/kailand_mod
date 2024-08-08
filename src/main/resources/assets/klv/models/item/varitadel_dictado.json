@@ -1,0 +1,7 @@
+{
+  "parent": "klv:custom/voidstaff",
+  "textures": {
+    "1": "klv:blocks/voidstaff",
+    "particle": "klv:items/staff_yumi_stand"
+  }
+}

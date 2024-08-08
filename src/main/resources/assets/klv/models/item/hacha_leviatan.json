@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "klv:items/leviathan_kratos_axe_in_god_of_war"
+  }
+}

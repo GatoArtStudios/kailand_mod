@@ -1,0 +1,32 @@
+{
+  "_fv": 43,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "warden_sword",
+    "customModelName": "Normal",
+    "name": "Espada Sonica",
+    "specialInfo": [
+      "§7Esta espada lanza un rayo sónico a los enemigos"
+    ],
+    "creativeTab": {
+      "value": "CUSTOM:KL"
+    },
+    "toolType": "Sword",
+    "harvestLevel": 1,
+    "efficiency": 4.0,
+    "attackSpeed": 1.4000000000000001,
+    "enchantability": 24,
+    "damageVsEntity": 12.799999999999999,
+    "usageCount": 2750,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [],
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onRightClickedInAir": {
+      "name": "ParticulasEnfrente"
+    }
+  }
+}

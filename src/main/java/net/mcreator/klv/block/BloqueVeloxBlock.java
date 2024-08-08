@@ -1,49 +1,53 @@
+
 package net.mcreator.klv.block;
 
-import java.util.Collections;
-import java.util.List;
-import net.mcreator.klv.init.KlvModBlocks;
-import net.minecraft.core.BlockPos;
-import net.minecraft.network.chat.Component;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.PickaxeItem;
-import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.ItemLike;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
-import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.storage.loot.LootContext;
+import net.minecraft.world.level.material.Material;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.PickaxeItem;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.network.chat.Component;
+import net.minecraft.core.BlockPos;
+
+import net.mcreator.klv.init.KlvModBlocks;
+
+import java.util.List;
+import java.util.Collections;
 
 public class BloqueVeloxBlock extends Block {
-    public BloqueVeloxBlock() {
-        super(Properties.m_60939_(Material.f_76278_).m_60918_(SoundType.f_56742_).m_60913_(1.2F, 10.0F).m_60999_().m_60956_(1.4F));
-    }
+	public BloqueVeloxBlock() {
+		super(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE).strength(1.2f, 10f).requiresCorrectToolForDrops().speedFactor(1.4f));
+	}
 
-    public void m_5871_(ItemStack itemstack, BlockGetter world, List<Component> list, TooltipFlag flag) {
-        super.m_5871_(itemstack, world, list, flag);
-        list.add(Component.m_237113_("Te acelera el paso"));
-    }
+	@Override
+	public void appendHoverText(ItemStack itemstack, BlockGetter world, List<Component> list, TooltipFlag flag) {
+		super.appendHoverText(itemstack, world, list, flag);
+		list.add(Component.literal("Te acelera el paso"));
+	}
 
-    public int m_7753_(BlockState state, BlockGetter worldIn, BlockPos pos) {
-        return 15;
-    }
+	@Override
+	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
+		return 15;
+	}
 
-    public boolean canHarvestBlock(BlockState state, BlockGetter world, BlockPos pos, Player player) {
-        Item var6 = player.m_150109_().m_36056_().m_41720_();
-        if (var6 instanceof PickaxeItem tieredItem) {
-            return tieredItem.m_43314_().m_6604_() >= 2;
-        } else {
-            return false;
-        }
-    }
+	@Override
+	public boolean canHarvestBlock(BlockState state, BlockGetter world, BlockPos pos, Player player) {
+		if (player.getInventory().getSelected().getItem() instanceof PickaxeItem tieredItem)
+			return tieredItem.getTier().getLevel() >= 2;
+		return false;
+	}
 
-    public List<ItemStack> m_7381_(BlockState state, LootContext.Builder builder) {
-        List<ItemStack> dropsOriginal = super.m_7381_(state, builder);
-        return !dropsOriginal.isEmpty() ? dropsOriginal : Collections.singletonList(new ItemStack((ItemLike)KlvModBlocks.BLOQUE_VELOX.get()));
-    }
+	@Override
+	public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
+		List<ItemStack> dropsOriginal = super.getDrops(state, builder);
+		if (!dropsOriginal.isEmpty())
+			return dropsOriginal;
+		return Collections.singletonList(new ItemStack(KlvModBlocks.BLOQUE_VELOX.get()));
+	}
 }

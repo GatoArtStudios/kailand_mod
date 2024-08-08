@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "key_of_khaj_nisut"
+      },
+      "name": "default"
+    }
+  }
+}

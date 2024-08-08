@@ -1,0 +1,17 @@
+{
+  "_fv": 43,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Sensor de Entidades",
+    "icon": "echolocate.png",
+    "color": {
+      "value": -16724788,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "isBad": false,
+    "isBenefitical": true,
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true
+  }
+}

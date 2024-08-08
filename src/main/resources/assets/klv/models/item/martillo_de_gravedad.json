@@ -1,0 +1,7 @@
+{
+  "parent": "klv:custom/martillogravedad",
+  "textures": {
+    "1": "klv:blocks/gravedada",
+    "particle": "klv:items/mazo_heroico"
+  }
+}

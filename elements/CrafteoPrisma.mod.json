@@ -1,0 +1,48 @@
+{
+  "_fv": 43,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "Blocks.NETHERITE_BLOCK"
+      },
+      {
+        "value": "CUSTOM:GemaKailand"
+      },
+      {
+        "value": "Blocks.NETHERITE_BLOCK"
+      },
+      {
+        "value": "CUSTOM:GemaKailand"
+      },
+      {
+        "value": "Items.NETHER_STAR"
+      },
+      {
+        "value": "CUSTOM:GemaKailand"
+      },
+      {
+        "value": "Blocks.NETHERITE_BLOCK"
+      },
+      {
+        "value": "CUSTOM:GemaKailand"
+      },
+      {
+        "value": "Blocks.NETHERITE_BLOCK"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:Prisma"
+    },
+    "name": "crafteo_prisma",
+    "namespace": "mod"
+  }
+}

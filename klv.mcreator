@@ -1,0 +1,3406 @@
+{
+  "mod_elements": [
+    {
+      "name": "KL",
+      "type": "tab",
+      "sortid": 79,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "kl",
+      "metadata": {
+        "files": []
+      }
+    },
+    {
+      "name": "MonedaRubi",
+      "type": "item",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "moneda_rubi",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/klv/models/item/moneda_rubi.json",
+          "src/main/java/net/mcreator/klv/item/MonedaRubiItem.java"
+        ]
+      }
+    },
+    {
+      "name": "MonedaAmatista",
+      "type": "item",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "moneda_amatista",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/item/MonedaAmatistaItem.java",
+          "src/main/resources/assets/klv/models/item/moneda_amatista.json"
+        ]
+      }
+    },
+    {
+      "name": "MonedaRota",
+      "type": "item",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "moneda_rota",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/klv/models/item/moneda_rota.json",
+          "src/main/java/net/mcreator/klv/item/MonedaRotaItem.java"
+        ]
+      }
+    },
+    {
+      "name": "HachaNordica",
+      "type": "tool",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hacha_nordica",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/klv/models/item/hacha_nordica.json",
+          "src/main/java/net/mcreator/klv/item/HachaNordicaItem.java"
+        ]
+      }
+    },
+    {
+      "name": "HachaLeviatan",
+      "type": "tool",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hacha_leviatan",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/item/HachaLeviatanItem.java",
+          "src/main/resources/assets/klv/models/item/hacha_leviatan.json"
+        ]
+      }
+    },
+    {
+      "name": "Katana",
+      "type": "tool",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "katana",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/item/KatanaItem.java",
+          "src/main/resources/assets/klv/models/item/katana.json"
+        ]
+      }
+    },
+    {
+      "name": "Cuchilla",
+      "type": "tool",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "guadana",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/item/CuchillaItem.java",
+          "src/main/resources/assets/klv/models/item/guadana.json"
+        ]
+      }
+    },
+    {
+      "name": "Guadana",
+      "type": "tool",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cuchilla",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/klv/models/item/cuchilla.json",
+          "src/main/java/net/mcreator/klv/item/GuadanaItem.java"
+        ]
+      }
+    },
+    {
+      "name": "HachaLeviatanProcedure",
+      "type": "procedure",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hacha_leviatan_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/HachaLeviatanProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "EsenciaDeRagnarok",
+      "type": "item",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "esencia_de_ragnarok",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/klv/models/item/esencia_de_ragnarok.json",
+          "src/main/java/net/mcreator/klv/item/EsenciaDeRagnarokItem.java"
+        ]
+      }
+    },
+    {
+      "name": "CrafteoHachaLeviatan",
+      "type": "recipe",
+      "sortid": 26,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crafteo_hacha_leviatan",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/klv/recipes/crafteo_hacha_leviatan.json"
+        ]
+      }
+    },
+    {
+      "name": "DashKatana",
+      "type": "procedure",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dash_katana",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/DashKatanaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CuchillaElevarProcedure",
+      "type": "procedure",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "cuchilla_elevar_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/CuchillaElevarProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GuadanaProcedure",
+      "type": "procedure",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "guadana_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/GuadanaProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RayosEfectoProcedure",
+      "type": "procedure",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rayos_efecto_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/RayosEfectoProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "VaritaDeLosDeseos",
+      "type": "item",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "varita_de_los_deseos",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/item/VaritaDeLosDeseosItem.java",
+          "src/main/resources/assets/klv/models/item/varita_de_los_deseos.json"
+        ]
+      }
+    },
+    {
+      "name": "GUIDeseos",
+      "type": "gui",
+      "sortid": 80,
+      "compiles": false,
+      "locked_code": false,
+      "registry_name": "gui_deseos",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/network/GUIDeseosButtonMessage.java",
+          "src/main/java/net/mcreator/klv/client/gui/GUIDeseosScreen.java",
+          "src/main/java/net/mcreator/klv/world/inventory/GUIDeseosMenu.java"
+        ]
+      }
+    },
+    {
+      "name": "DarHachaleviatan",
+      "type": "procedure",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dar_hachaleviatan",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/DarHachaleviatanProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DarKatana",
+      "type": "procedure",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dar_katana",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/DarKatanaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DarCuchilla",
+      "type": "procedure",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dar_cuchilla",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/DarCuchillaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DarGuadana",
+      "type": "procedure",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dar_guadana",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/DarGuadanaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AbrirGUIDeseos",
+      "type": "procedure",
+      "sortid": 23,
+      "compiles": false,
+      "locked_code": false,
+      "registry_name": "abrir_gui_deseos",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/AbrirGUIDeseosProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ModoDios5minutos",
+      "type": "procedure",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "modo_dios_5minutos",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/ModoDios5minutosProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "LogroMoneda",
+      "type": "achievement",
+      "sortid": 28,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "logro_moneda",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/klv/advancements/logro_moneda.json"
+        ]
+      }
+    },
+    {
+      "name": "LogroMonedaRubi",
+      "type": "achievement",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "logro_moneda_rubi",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/klv/advancements/logro_moneda_rubi.json"
+        ]
+      }
+    },
+    {
+      "name": "LogroMonedaRubis",
+      "type": "achievement",
+      "sortid": 29,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "logro_moneda_rubis",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/klv/advancements/logro_moneda_rubis.json"
+        ]
+      }
+    },
+    {
+      "name": "LogroMonedaRota",
+      "type": "achievement",
+      "sortid": 30,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "logro_moneda_rota",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/klv/advancements/logro_moneda_rota.json"
+        ]
+      }
+    },
+    {
+      "name": "LogroHachaNordica",
+      "type": "achievement",
+      "sortid": 31,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "logro_hacha_nordica",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/klv/advancements/logro_hacha_nordica.json"
+        ]
+      }
+    },
+    {
+      "name": "LogroHachaLeviatan",
+      "type": "achievement",
+      "sortid": 32,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "logro_hacha_leviatan",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/klv/advancements/logro_hacha_leviatan.json"
+        ]
+      }
+    },
+    {
+      "name": "LogroKatana",
+      "type": "achievement",
+      "sortid": 33,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "logro_katana",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/klv/advancements/logro_katana.json"
+        ]
+      }
+    },
+    {
+      "name": "LogroCuchilla",
+      "type": "achievement",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "logro_cuchilla",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/klv/advancements/logro_cuchilla.json"
+        ]
+      }
+    },
+    {
+      "name": "LogroGuadana",
+      "type": "achievement",
+      "sortid": 35,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "logro_guadana",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/klv/advancements/logro_guadana.json"
+        ]
+      }
+    },
+    {
+      "name": "LogroVaritaDeseos",
+      "type": "achievement",
+      "sortid": 36,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "logro_varita_deseos",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/klv/advancements/logro_varita_deseos.json"
+        ]
+      }
+    },
+    {
+      "name": "Mjolnir",
+      "type": "rangeditem",
+      "sortid": 37,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mjolnir",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/item/MjolnirItem.java",
+          "src/main/java/net/mcreator/klv/entity/MjolnirEntity.java",
+          "src/main/resources/assets/klv/models/item/mjolnir.json"
+        ]
+      }
+    },
+    {
+      "name": "MjolnirCuandoElProyectilGolpeaUnJugador",
+      "type": "procedure",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mjolnir_cuando_el_proyectil_golpea_un_jugador",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/MjolnirCuandoElProyectilGolpeaUnJugadorProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MjolnirPuedeUsarEsteObjeto",
+      "type": "procedure",
+      "sortid": 40,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mjolnir_puede_usar_este_objeto",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/MjolnirPuedeUsarEsteObjetoProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MjolnirCuandoElProyectilGolpeaUnBloque",
+      "type": "procedure",
+      "sortid": 41,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mjolnir_cuando_el_proyectil_golpea_un_bloque",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/MjolnirCuandoElProyectilGolpeaUnBloqueProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DarMjonlir",
+      "type": "procedure",
+      "sortid": 42,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dar_mjonlir",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/DarMjonlirProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "LorgoMjonlir",
+      "type": "achievement",
+      "sortid": 44,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lorgo_mjonlir",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/klv/advancements/lorgo_mjonlir.json"
+        ]
+      }
+    },
+    {
+      "name": "AntidisturbiosCanUseRangedItem",
+      "type": "procedure",
+      "sortid": 45,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "antidisturbios_can_use_ranged_item",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/AntidisturbiosCanUseRangedItemProcedure.java"
+        ],
+        "dependencies": []
+      }
+    },
+    {
+      "name": "Antidisturbios",
+      "type": "rangeditem",
+      "sortid": 46,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "antidisturbios",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/klv/models/item/antidisturbios.json",
+          "src/main/java/net/mcreator/klv/entity/AntidisturbiosEntity.java",
+          "src/main/java/net/mcreator/klv/item/AntidisturbiosItem.java"
+        ]
+      }
+    },
+    {
+      "name": "ShieldDamage",
+      "type": "procedure",
+      "sortid": 47,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shield_damage",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/ShieldDamageProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ParticulasEnfrente",
+      "type": "procedure",
+      "sortid": 48,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "particulas_enfrente",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/ParticulasEnfrenteProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "EspadaSonica",
+      "type": "tool",
+      "sortid": 49,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "espada_sonica",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/item/EspadaSonicaItem.java",
+          "src/main/resources/assets/klv/models/item/espada_sonica.json"
+        ]
+      }
+    },
+    {
+      "name": "CollarDeAmatistaBaubleIsEquipped",
+      "type": "procedure",
+      "sortid": 50,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "collar_de_amatista_bauble_is_equipped",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/CollarDeAmatistaBaubleIsEquippedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CollarDeAmatistaWhileBaubleIsEquippedTick",
+      "type": "procedure",
+      "sortid": 51,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "collar_de_amatista_while_bauble_is_equipped_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/CollarDeAmatistaWhileBaubleIsEquippedTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CascoDeWardenAlTenerPuestoElCasco",
+      "type": "procedure",
+      "sortid": 52,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "casco_de_warden_al_tener_puesto_el_casco",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/CascoDeWardenAlTenerPuestoElCascoProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CascoDeWarden",
+      "type": "armor",
+      "sortid": 53,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "casco_de_warden",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/klv/models/item/casco_de_warden_leggings.json",
+          "src/main/resources/assets/klv/models/item/casco_de_warden_chestplate.json",
+          "src/main/resources/assets/klv/models/item/casco_de_warden_helmet.json",
+          "src/main/resources/assets/klv/models/item/casco_de_warden_boots.json",
+          "src/main/java/net/mcreator/klv/item/CascoDeWardenItem.java"
+        ]
+      }
+    },
+    {
+      "name": "Cooldown",
+      "type": "potioneffect",
+      "sortid": 71,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cooldown",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/potion/CooldownMobEffect.java"
+        ]
+      }
+    },
+    {
+      "name": "BotasWardenProcedure",
+      "type": "procedure",
+      "sortid": 55,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "botas_warden_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/BotasWardenProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CascoDeWardenAlTenerPuestosLosPantalones",
+      "type": "procedure",
+      "sortid": 56,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "casco_de_warden_al_tener_puestos_los_pantalones",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/CascoDeWardenAlTenerPuestosLosPantalonesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CascoDeWardenEventoCadaTickDelPetoDeArmadura",
+      "type": "procedure",
+      "sortid": 57,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "casco_de_warden_evento_cada_tick_del_peto_de_armadura",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/CascoDeWardenEventoCadaTickDelPetoDeArmaduraProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "VaritaDeSkull",
+      "type": "item",
+      "sortid": 58,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "varita_de_skull",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/klv/models/item/varita_de_skull.json",
+          "src/main/java/net/mcreator/klv/item/VaritaDeSkullItem.java"
+        ]
+      }
+    },
+    {
+      "name": "SkullRayoProcedure",
+      "type": "procedure",
+      "sortid": 59,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "skull_rayo_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/SkullRayoProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TsukeCuandoSeHaceClicConElBotonDerecho",
+      "type": "procedure",
+      "sortid": 60,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tsuke_cuando_se_hace_clic_con_el_boton_derecho",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/TsukeCuandoSeHaceClicConElBotonDerechoProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Tsuke",
+      "type": "tool",
+      "sortid": 61,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tsuke",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/item/TsukeItem.java",
+          "src/main/resources/assets/klv/models/item/tsuke.json"
+        ]
+      }
+    },
+    {
+      "name": "CorazonDelWarden",
+      "type": "item",
+      "sortid": 62,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "corazon_del_warden",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/klv/models/item/corazon_del_warden.json",
+          "src/main/java/net/mcreator/klv/item/CorazonDelWardenItem.java"
+        ]
+      }
+    },
+    {
+      "name": "VenasDeWarden",
+      "type": "item",
+      "sortid": 63,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "venas_de_warden",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/klv/models/item/venas_de_warden.json",
+          "src/main/java/net/mcreator/klv/item/VenasDeWardenItem.java"
+        ]
+      }
+    },
+    {
+      "name": "CrafteoCorazonWarden",
+      "type": "recipe",
+      "sortid": 64,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crafteo_corazon_warden",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/klv/recipes/crafteo_corazon_warden.json"
+        ]
+      }
+    },
+    {
+      "name": "CascoSkull",
+      "type": "recipe",
+      "sortid": 65,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "casco_skull",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/klv/recipes/casco_skull.json"
+        ]
+      }
+    },
+    {
+      "name": "PecheraSkull",
+      "type": "recipe",
+      "sortid": 66,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pechera_skull",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/klv/recipes/pechera_skull.json"
+        ]
+      }
+    },
+    {
+      "name": "GrebasSkull",
+      "type": "recipe",
+      "sortid": 67,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "grebas_skull",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/klv/recipes/grebas_skull.json"
+        ]
+      }
+    },
+    {
+      "name": "BotasSkull",
+      "type": "recipe",
+      "sortid": 68,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "botas_skull",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/klv/recipes/botas_skull.json"
+        ]
+      }
+    },
+    {
+      "name": "ArmaduraWardenEfectosProcedure",
+      "type": "procedure",
+      "sortid": 69,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "armadura_warden_efectos_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/ArmaduraWardenEfectosProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SensorDeEntidades",
+      "type": "potioneffect",
+      "sortid": 70,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sensor_de_entidades",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/potion/SensorDeEntidadesMobEffect.java"
+        ]
+      }
+    },
+    {
+      "name": "MazoHeroicoCuandoSeHaceClicConElBotonDerecho",
+      "type": "procedure",
+      "sortid": 73,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mazo_heroico_cuando_se_hace_clic_con_el_boton_derecho",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/MazoHeroicoCuandoSeHaceClicConElBotonDerechoProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "HeroicoAlEstarActivoElEfecto",
+      "type": "procedure",
+      "sortid": 74,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "heroico_al_estar_activo_el_efecto",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/HeroicoAlEstarActivoElEfectoProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "HeroicoAlFinalizarElEfecto",
+      "type": "procedure",
+      "sortid": 75,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "heroico_al_finalizar_el_efecto",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/HeroicoAlFinalizarElEfectoProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "HeroicoCuandoElEfectoEmpiezaAAplicarse",
+      "type": "procedure",
+      "sortid": 76,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "heroico_cuando_el_efecto_empieza_a_aplicarse",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/HeroicoCuandoElEfectoEmpiezaAAplicarseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MazoHeroico",
+      "type": "tool",
+      "sortid": 77,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "mazo_heroico",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/klv/models/item/mazo_heroico.json",
+          "src/main/java/net/mcreator/klv/item/MazoHeroicoItem.java"
+        ]
+      }
+    },
+    {
+      "name": "IgnoracionDeArmadura",
+      "type": "enchantment",
+      "sortid": 81,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ignoracion_de_armadura",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/enchantment/IgnoracionDeArmaduraEnchantment.java"
+        ]
+      }
+    },
+    {
+      "name": "MazoHeroicoAlEntidadSerGolpeadaConLaHerramienta",
+      "type": "procedure",
+      "sortid": 78,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "mazo_heroico_al_entidad_ser_golpeada_con_la_herramienta",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/MazoHeroicoAlEntidadSerGolpeadaConLaHerramientaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      }
+    },
+    {
+      "name": "WardenLoot",
+      "type": "procedure",
+      "sortid": 82,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "warden_loot",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/WardenLootProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AutoFundicionProcedure",
+      "type": "procedure",
+      "sortid": 86,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "auto_fundicion_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/AutoFundicionProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PicoKailand",
+      "type": "tool",
+      "sortid": 87,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pico_kailand",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/item/PicoKailandItem.java",
+          "src/main/resources/assets/klv/models/item/pico_kailand.json"
+        ]
+      }
+    },
+    {
+      "name": "GemaKailand",
+      "type": "item",
+      "sortid": 88,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gema_kailand",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/klv/models/item/gema_kailand.json",
+          "src/main/java/net/mcreator/klv/item/GemaKailandItem.java"
+        ]
+      }
+    },
+    {
+      "name": "CrafteoPicoKailand",
+      "type": "recipe",
+      "sortid": 89,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crafteo_pico_kailand",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/klv/recipes/crafteo_pico_kailand.json"
+        ]
+      }
+    },
+    {
+      "name": "DarTsuke",
+      "type": "procedure",
+      "sortid": 90,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dar_tsuke",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/DarTsukeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "EspadaShulkerCuandoSeHaceClicConElBotonDerecho",
+      "type": "procedure",
+      "sortid": 91,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "espada_shulker_cuando_se_hace_clic_con_el_boton_derecho",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/EspadaShulkerCuandoSeHaceClicConElBotonDerechoProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      }
+    },
+    {
+      "name": "EspadaShulker",
+      "type": "tool",
+      "sortid": 92,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "espada_shulker",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/klv/models/item/espada_shulker.json",
+          "src/main/java/net/mcreator/klv/item/EspadaShulkerItem.java"
+        ]
+      }
+    },
+    {
+      "name": "CrafteoEspadaShulker",
+      "type": "recipe",
+      "sortid": 93,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crafteo_espada_shulker",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/klv/recipes/crafteo_espada_shulker.json"
+        ]
+      }
+    },
+    {
+      "name": "MazoHeroicoAlEntidadYaNoSostenerLaHerramienta",
+      "type": "procedure",
+      "sortid": 94,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mazo_heroico_al_entidad_ya_no_sostener_la_herramienta",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/MazoHeroicoAlEntidadYaNoSostenerLaHerramientaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      }
+    },
+    {
+      "name": "HitArmor",
+      "type": "potioneffect",
+      "sortid": 95,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hit_armor",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/potion/HitArmorMobEffect.java"
+        ]
+      }
+    },
+    {
+      "name": "CorazonDeWardenLogro",
+      "type": "achievement",
+      "sortid": 96,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "corazon_de_warden_logro",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/klv/advancements/corazon_de_warden_logro.json"
+        ]
+      }
+    },
+    {
+      "name": "LogroTsuke",
+      "type": "achievement",
+      "sortid": 97,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "logro_tsuke",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/klv/advancements/logro_tsuke.json"
+        ]
+      }
+    },
+    {
+      "name": "LogroMazo",
+      "type": "achievement",
+      "sortid": 98,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "logro_mazo",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/klv/advancements/logro_mazo.json"
+        ]
+      }
+    },
+    {
+      "name": "BotasAgiles",
+      "type": "armor",
+      "sortid": 99,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "botas_agiles",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/klv/models/item/botas_agiles_boots.json",
+          "src/main/java/net/mcreator/klv/item/BotasAgilesItem.java"
+        ]
+      }
+    },
+    {
+      "name": "DobleSaltoAlSerPresionada",
+      "type": "procedure",
+      "sortid": 100,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "doble_salto_al_ser_presionada",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/DobleSaltoAlSerPresionadaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DobleSalto",
+      "type": "keybind",
+      "sortid": 139,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "doble_salto",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/network/DobleSaltoMessage.java"
+        ]
+      }
+    },
+    {
+      "name": "CadaTickDobleSalto",
+      "type": "procedure",
+      "sortid": 102,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cada_tick_doble_salto",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/CadaTickDobleSaltoProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DobleSaltoEncantamiento",
+      "type": "enchantment",
+      "sortid": 104,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "doble_salto_encantamiento",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/enchantment/DobleSaltoEncantamientoEnchantment.java"
+        ]
+      }
+    },
+    {
+      "name": "BotasAgilesAlTenerPuestasLasBotas",
+      "type": "procedure",
+      "sortid": 106,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "botas_agiles_al_tener_puestas_las_botas",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/BotasAgilesAlTenerPuestasLasBotasProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MineralMistico",
+      "type": "block",
+      "sortid": 107,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mineral_mistico",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/world/features/ores/MineralMisticoFeature.java",
+          "src/main/resources/assets/klv/blockstates/mineral_mistico.json",
+          "src/main/resources/assets/klv/models/block/mineral_mistico.json",
+          "src/main/java/net/mcreator/klv/block/MineralMisticoBlock.java",
+          "src/main/resources/data/klv/forge/biome_modifier/mineral_mistico_biome_modifier.json",
+          "src/main/resources/assets/klv/models/item/mineral_mistico.json"
+        ]
+      }
+    },
+    {
+      "name": "PocionTeleport",
+      "type": "procedure",
+      "sortid": 109,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pocion_teleport",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/PocionTeleportProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CuandoDasClickCama",
+      "type": "procedure",
+      "sortid": 110,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cuando_das_click_cama",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/CuandoDasClickCamaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TeleportEffect",
+      "type": "potioneffect",
+      "sortid": 111,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "teleport_effect",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/potion/TeleportEffectMobEffect.java"
+        ]
+      }
+    },
+    {
+      "name": "PocionDeRegreso",
+      "type": "potion",
+      "sortid": 140,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pocion_de_regreso",
+      "metadata": {
+        "files": []
+      }
+    },
+    {
+      "name": "BloqueVelox",
+      "type": "block",
+      "sortid": 112,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bloque_velox",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/klv/blockstates/bloque_velox.json",
+          "src/main/resources/assets/klv/models/item/bloque_velox.json",
+          "src/main/java/net/mcreator/klv/world/features/ores/BloqueVeloxFeature.java",
+          "src/main/java/net/mcreator/klv/block/BloqueVeloxBlock.java",
+          "src/main/resources/assets/klv/models/block/bloque_velox.json",
+          "src/main/resources/data/klv/forge/biome_modifier/bloque_velox_biome_modifier.json"
+        ]
+      }
+    },
+    {
+      "name": "RobaVidaProcedure",
+      "type": "procedure",
+      "sortid": 113,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "roba_vida_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/RobaVidaProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "EspadaVampirica",
+      "type": "tool",
+      "sortid": 114,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "espada_vampirica",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/klv/models/item/espada_vampirica.json",
+          "src/main/java/net/mcreator/klv/item/EspadaVampiricaItem.java"
+        ]
+      }
+    },
+    {
+      "name": "ParedGloo2",
+      "type": "procedure",
+      "sortid": 115,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "pared_gloo_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/ParedGloo2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GemaHeladaCuandoSeHaceClicConElBotonDerecho",
+      "type": "procedure",
+      "sortid": 118,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gema_helada_cuando_se_hace_clic_con_el_boton_derecho",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/GemaHeladaCuandoSeHaceClicConElBotonDerechoProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GemaHelada",
+      "type": "item",
+      "sortid": 119,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gema_helada",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/item/GemaHeladaItem.java",
+          "src/main/resources/assets/klv/models/item/gema_helada.json"
+        ]
+      }
+    },
+    {
+      "name": "Prisma",
+      "type": "item",
+      "sortid": 120,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "prisma",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/klv/models/item/prisma.json",
+          "src/main/java/net/mcreator/klv/item/PrismaItem.java"
+        ]
+      }
+    },
+    {
+      "name": "PrismaCuandoSeHaceClicConElBotonDerecho",
+      "type": "procedure",
+      "sortid": 121,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "prisma_cuando_se_hace_clic_con_el_boton_derecho",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/PrismaCuandoSeHaceClicConElBotonDerechoProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CrafteoPrisma",
+      "type": "recipe",
+      "sortid": 122,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crafteo_prisma",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/klv/recipes/crafteo_prisma.json"
+        ]
+      }
+    },
+    {
+      "name": "ProcedureParedGloo3",
+      "type": "procedure",
+      "sortid": 124,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "procedure_pared_gloo_3",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/ProcedureParedGloo3Procedure.java"
+        ],
+        "dependencies": []
+      }
+    },
+    {
+      "name": "Recargarapida",
+      "type": "enchantment",
+      "sortid": 125,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "recargarapida",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/enchantment/RecargarapidaEnchantment.java"
+        ]
+      }
+    },
+    {
+      "name": "RapidFireProcedure",
+      "type": "procedure",
+      "sortid": 126,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "rapidfire",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/RapidFireProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      }
+    },
+    {
+      "name": "EscaleraGloo",
+      "type": "procedure",
+      "sortid": 127,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "escalera_gloo",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/EscaleraGlooProcedure.java"
+        ],
+        "dependencies": []
+      }
+    },
+    {
+      "name": "CuandoJugadorClickAgachadoEscalera",
+      "type": "procedure",
+      "sortid": 128,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "cuando_jugador_click_agachado_escalera",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/CuandoJugadorClickAgachadoEscaleraProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "EspadaMistica",
+      "type": "tool",
+      "sortid": 129,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "espada_mistica",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/item/EspadaMisticaItem.java",
+          "src/main/resources/assets/klv/models/item/espada_mistica.json"
+        ]
+      }
+    },
+    {
+      "name": "FuriaInfernal",
+      "type": "tool",
+      "sortid": 130,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "furia_infernal",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/item/FuriaInfernalItem.java",
+          "src/main/resources/assets/klv/models/item/furia_infernal.json"
+        ]
+      }
+    },
+    {
+      "name": "FuriaInfernalProcedure",
+      "type": "procedure",
+      "sortid": 131,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "furia_infernal_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/FuriaInfernalProcedureProcedure.java"
+        ],
+        "dependencies": []
+      }
+    },
+    {
+      "name": "RandomDirectionChange",
+      "type": "procedure",
+      "sortid": 132,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "random_direction_change",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/RandomDirectionChangeProcedure.java"
+        ],
+        "dependencies": []
+      }
+    },
+    {
+      "name": "RandomDirection",
+      "type": "potioneffect",
+      "sortid": 133,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "random_direction",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/potion/RandomDirectionMobEffect.java"
+        ]
+      }
+    },
+    {
+      "name": "MisticaSwordEffect",
+      "type": "procedure",
+      "sortid": 134,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "mistica_sword_effect",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/MisticaSwordEffectProcedure.java"
+        ],
+        "dependencies": []
+      }
+    },
+    {
+      "name": "SimonDice",
+      "type": "procedure",
+      "sortid": 135,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "simon_dice",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/SimonDiceProcedure.java"
+        ],
+        "dependencies": []
+      }
+    },
+    {
+      "name": "VaritadelDictado",
+      "type": "item",
+      "sortid": 136,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "varitadel_dictado",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/klv/models/item/varitadel_dictado.json",
+          "src/main/java/net/mcreator/klv/item/VaritadelDictadoItem.java"
+        ]
+      }
+    },
+    {
+      "name": "VaritaLunar",
+      "type": "item",
+      "sortid": 137,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "varita_lunar",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/klv/models/item/varita_lunar.json",
+          "src/main/java/net/mcreator/klv/item/VaritaLunarItem.java"
+        ]
+      }
+    },
+    {
+      "name": "LunarRay",
+      "type": "procedure",
+      "sortid": 138,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "lunar_ray",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/LunarRayProcedure.java"
+        ],
+        "dependencies": []
+      }
+    },
+    {
+      "name": "AdminInmortal",
+      "type": "procedure",
+      "sortid": 141,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "admin_inmortal",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/AdminInmortalProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AdminSaturacion",
+      "type": "procedure",
+      "sortid": 142,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "admin_saturacion",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/AdminSaturacionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AdminInvisible",
+      "type": "procedure",
+      "sortid": 143,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "admin_invisible",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/AdminInvisibleProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AdminQuitarEfecto",
+      "type": "procedure",
+      "sortid": 144,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "admin_quitar_efecto",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/AdminQuitarEfectoProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AdminSpawn",
+      "type": "procedure",
+      "sortid": 145,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "admin_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/AdminSpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AdminRayos",
+      "type": "procedure",
+      "sortid": 146,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "admin_rayos",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/AdminRayosProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Rayos10Procedure",
+      "type": "procedure",
+      "sortid": 147,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rayos_10_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/Rayos10ProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Rayos10",
+      "type": "command",
+      "sortid": 156,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rayos_10",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/command/Rayos10Command.java"
+        ]
+      }
+    },
+    {
+      "name": "AdminQuitarLluvia",
+      "type": "procedure",
+      "sortid": 148,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "admin_desatado",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/AdminQuitarLluviaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AdminGui",
+      "type": "gui",
+      "sortid": 149,
+      "compiles": false,
+      "locked_code": false,
+      "registry_name": "admin_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/world/inventory/AdminGuiMenu.java",
+          "src/main/java/net/mcreator/klv/client/gui/AdminGuiScreen.java",
+          "src/main/java/net/mcreator/klv/network/AdminGuiButtonMessage.java"
+        ]
+      }
+    },
+    {
+      "name": "AbrirGUIAdmin",
+      "type": "procedure",
+      "sortid": 150,
+      "compiles": false,
+      "locked_code": false,
+      "registry_name": "abrir_gui_admin",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/AbrirGUIAdminProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TeclaAdmin",
+      "type": "keybind",
+      "sortid": 151,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tecla_admin",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/network/TeclaAdminMessage.java"
+        ]
+      }
+    },
+    {
+      "name": "VanishProcedure",
+      "type": "procedure",
+      "sortid": 152,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vanish_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/VanishProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Vanish",
+      "type": "keybind",
+      "sortid": 153,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vanish",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/network/VanishMessage.java"
+        ]
+      }
+    },
+    {
+      "name": "QuitarItemDelInventarioProcedure",
+      "type": "procedure",
+      "sortid": 157,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "quitar_item_del_inventario_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/QuitarItemDelInventarioProcedureProcedure.java"
+        ],
+        "dependencies": []
+      }
+    },
+    {
+      "name": "UnGive",
+      "type": "command",
+      "sortid": 159,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "un_give",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/command/UnGiveCommand.java"
+        ]
+      }
+    },
+    {
+      "name": "BaculoElemental",
+      "type": "item",
+      "sortid": 160,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "baculo_dorado",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/klv/models/item/baculo_dorado.json",
+          "src/main/java/net/mcreator/klv/item/BaculoElementalItem.java"
+        ]
+      }
+    },
+    {
+      "name": "BastonElemental",
+      "type": "procedure",
+      "sortid": 161,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "baculo_dorado",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/BastonElementalProcedure.java"
+        ],
+        "dependencies": []
+      }
+    },
+    {
+      "name": "DarMarcoInvisible",
+      "type": "procedure",
+      "sortid": 162,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dar_marco_invisible",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/DarMarcoInvisibleProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DarPocion",
+      "type": "procedure",
+      "sortid": 163,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dar_pocion",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/DarPocionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DarVisionNocturna",
+      "type": "procedure",
+      "sortid": 164,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dar_vision_nocturna",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/DarVisionNocturnaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DarLightBlock",
+      "type": "procedure",
+      "sortid": 165,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dar_light_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/DarLightBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Dia",
+      "type": "procedure",
+      "sortid": 169,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dia",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/DiaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Noche",
+      "type": "procedure",
+      "sortid": 170,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "noche",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/NocheProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MartilloDeGravedad",
+      "type": "tool",
+      "sortid": 171,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "martillo_de_gravedad",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/item/MartilloDeGravedadItem.java",
+          "src/main/resources/assets/klv/models/item/martillo_de_gravedad.json"
+        ]
+      }
+    },
+    {
+      "name": "MartilloDeGravedadProcedure",
+      "type": "procedure",
+      "sortid": 172,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "martillo_de_gravedad_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/MartilloDeGravedadProcedureProcedure.java"
+        ],
+        "dependencies": []
+      }
+    },
+    {
+      "name": "EspadaShulkerProcedure",
+      "type": "procedure",
+      "sortid": 173,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "espada_shulker_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/EspadaShulkerProcedureProcedure.java"
+        ],
+        "dependencies": []
+      }
+    },
+    {
+      "name": "GuadanaAlEntidadSerGolpeadaConLaHerramienta",
+      "type": "procedure",
+      "sortid": 174,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "guadana_al_entidad_ser_golpeada_con_la_herramienta",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/procedures/GuadanaAlEntidadSerGolpeadaConLaHerramientaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CrafteoAntiDisturbios",
+      "type": "recipe",
+      "sortid": 175,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crafteo_anti_disturbios",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/klv/recipes/crafteo_anti_disturbios.json"
+        ]
+      }
+    },
+    {
+      "name": "CooldownAreaRegenerativa",
+      "type": "potioneffect",
+      "sortid": 186,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cooldown_area_regenerativa",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/potion/CooldownAreaRegenerativaMobEffect.java"
+        ]
+      }
+    },
+    {
+      "name": "CooldownCadenasDeLuz",
+      "type": "potioneffect",
+      "sortid": 187,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cooldown_cadenas_de_luz",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/potion/CooldownCadenasDeLuzMobEffect.java"
+        ]
+      }
+    },
+    {
+      "name": "CooldownCambio",
+      "type": "potioneffect",
+      "sortid": 188,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cooldown_cambio",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/potion/CooldownCambioMobEffect.java"
+        ]
+      }
+    },
+    {
+      "name": "CooldownAlientoDeDragon",
+      "type": "potioneffect",
+      "sortid": 191,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cooldown_aliento_de_dragon",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/potion/CooldownAlientoDeDragonMobEffect.java"
+        ]
+      }
+    },
+    {
+      "name": "CooldownCorteFugaz",
+      "type": "potioneffect",
+      "sortid": 192,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cooldown_corte_fugaz",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/klv/potion/CooldownCorteFugazMobEffect.java"
+        ]
+      }
+    },
+    {
+      "name": "MonedaDeOro",
+      "type": "item",
+      "sortid": 193,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "moneda_de_oro",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/klv/models/item/moneda_de_oro.json",
+          "src/main/java/net/mcreator/klv/item/MonedaDeOroItem.java"
+        ]
+      }
+    }
+  ],
+  "variable_elements": [
+    {
+      "name": "Temporizador",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "JumpVar",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "reaminingJumos",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "PlayerSpawnLocationX",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "PlayerSpawnLocationY",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "PlayerSpawnLocationZ",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "hologram_lifetime",
+      "type": "number",
+      "scope": "map",
+      "value": "600.0"
+    }
+  ],
+  "sound_elements": [
+    {
+      "name": "katanasound",
+      "files": [
+        "y2mate.com_-_efecto_de_sonido_de_katana"
+      ],
+      "category": "player",
+      "subtitle": "Katana"
+    },
+    {
+      "name": "lanzarmjonlir",
+      "files": [
+        "throw"
+      ],
+      "category": "neutral",
+      "subtitle": "Mjölnir lanzado"
+    },
+    {
+      "name": "lanzarmartillothor",
+      "files": [
+        "throw1"
+      ],
+      "category": "neutral",
+      "subtitle": ""
+    },
+    {
+      "name": "impactomjonlir1",
+      "files": [
+        "ground_impact1"
+      ],
+      "category": "neutral",
+      "subtitle": "Mjölnir Impacta contra entidad"
+    },
+    {
+      "name": "mjonlirpiercesound1",
+      "files": [
+        "pierce1"
+      ],
+      "category": "neutral",
+      "subtitle": ""
+    }
+  ],
+  "language_map": {
+    "en_us": {
+      "item.klv.katana": "Katana",
+      "item.klv.esencia_de_ragnarok": "Esencia De Ragnarök",
+      "item.klv.espada_vampirica": "Espada vampírica",
+      "item.klv.hacha_leviatan": "Hacha Leviatán",
+      "gui.klv.gui_deseos.button_dar_tsuke": "Dar Tsuke",
+      "effect.klv.random_direction": "Confusión",
+      "advancements.logro_moneda_rota.descr": "Consigue una moneda Kailand estropeada",
+      "item.klv.casco_de_warden_leggings": "Pantalones de Warden",
+      "subtitles.mjonlirpiercesound1": "",
+      "advancements.logro_katana.descr": "Consigue una Katana",
+      "item.klv.cuchilla": "Cuchilla",
+      "item.klv.furia_infernal": "Furia Infernal",
+      "advancements.logro_moneda_rubis.descr": "Consigue una moneda Kailand de Rubí",
+      "gui.klv.admin_gui.button_vanish": "Vanish",
+      "advancements.logro_tsuke.descr": "Consigue una Tsuke",
+      "itemGroup.tabkl": "Kailand Z",
+      "advancements.logro_cuchilla.title": "Maestro del Vuelo Cortante",
+      "enchantment.klv.doble_salto_encantamiento": "Doble Salto",
+      "item.klv.casco_de_warden_boots": "Botas de Warden",
+      "item.klv.antidisturbios": "Antidisturbios",
+      "advancements.logro_varita_deseos.title": "Cumplidor de Sueños Insuperable",
+      "effect.klv.cooldown_aliento_de_dragon": "Cooldown Aliento de Dragón",
+      "item.minecraft.potion.effect.pocion_de_regreso": "Pocion de Regreso",
+      "item.klv.varita_de_skull": "Varita De Skull",
+      "advancements.logro_hacha_leviatan.title": "Dueño del Hacha de los Vikingos",
+      "gui.klv.gui_deseos.button_noche": "Noche",
+      "effect.klv.cooldown_area_regenerativa": "Cooldown Área Regenerativa",
+      "gui.klv.gui_deseos.button_diaaaa": "Día",
+      "enchantment.klv.ignoracion_de_armadura": "Hit Armor",
+      "advancements.logro_mazo.descr": "Consigue el Mazo Heroico",
+      "advancements.logro_moneda.title": "Tesoro de Kailand",
+      "item.klv.varita_lunar": "Varita Lunar",
+      "gui.klv.admin_gui.button_invisible": "Invisible",
+      "item.minecraft.lingering_potion.effect.pocion_de_regreso": "Pocion de Regreso Persistente",
+      "item.klv.varitadel_dictado": "Varitadel Dictado",
+      "item.klv.tsuke": "Tsuke",
+      "gui.klv.admin_gui.button_dar_marco_invisible": "Dar marco invisible",
+      "item.klv.guadana": "Guadaña",
+      "enchantment.klv.recargarapida": "Recarga rápida",
+      "key.klv.vanish": "Vanish",
+      "gui.klv.admin_gui.button_inmortalidad": "Inmortalidad",
+      "advancements.logro_mazo.title": "Impacto Supremo",
+      "effect.klv.teleport_effect": "TP",
+      "item.klv.moneda_de_oro": "Moneda De Oro",
+      "gui.klv.gui_deseos.button_obten_la_guadana": "Obten la Guadaña",
+      "item.klv.espada_mistica": "Espada Mistica",
+      "gui.klv.gui_deseos.button_obten_el_mjonlir": "Obten el Mjonlir",
+      "item.klv.mazo_heroico": "Mazo Heroico",
+      "advancements.logro_hacha_leviatan.descr": "Consigue un Hacha Leviatan",
+      "item.klv.gema_helada": "Gema Helada",
+      "advancements.logro_hacha_nordica.title": "Furioso Guerrero Nórdico",
+      "effect.klv.cooldown_cambio": "Cooldown Cambio",
+      "effect.klv.cooldown_corte_fugaz": "Cooldown Aliento de Dragón",
+      "advancements.logro_cuchilla.descr": "Consigue una Cuchilla",
+      "advancements.logro_moneda.descr": "Consigue una moneda Kailand",
+      "gui.klv.gui_deseos.label_elige_un_deseo": "Elige un deseo",
+      "item.klv.martillo_de_gravedad": "Martillo De Gravedad",
+      "item.klv.corazon_del_warden": "Corazón De Warden",
+      "block.klv.bloque_velox": "Bloque Velox",
+      "subtitles.lanzarmjonlir": "Mjölnir lanzado",
+      "effect.klv.hit_armor": "Heroico",
+      "item.minecraft.splash_potion.effect.pocion_de_regreso": "Pocion de Regreso arrojadiza",
+      "item.klv.moneda_rota": "Moneda Rota",
+      "gui.klv.admin_gui.button_saturacion": "Saturacion",
+      "key.klv.tecla_admin": "Menú de Admin",
+      "item.minecraft.tipped_arrow.effect.pocion_de_regreso": "Flecha de Pocion de Regreso",
+      "effect.klv.cooldown": "Cooldown",
+      "gui.klv.admin_gui.button_vision_nocturna": "Visión Nocturna",
+      "advancements.logro_moneda_rubis.title": "Cazador de Riquezas Rubí",
+      "gui.klv.gui_deseos.button_obten_el_hacha_leviatan": "Obten el Hacha Leviatan",
+      "subtitles.impactomjonlir1": "Mjölnir Impacta contra entidad",
+      "advancements.logro_moneda_rota.title": "Recolector de Tesoros Olvidados",
+      "item.klv.moneda_rubi": "Moneda Rubí",
+      "gui.klv.gui_deseos.button_obten_la_katana": "Obten la Katana",
+      "subtitles.lanzarmartillothor": "",
+      "advancements.logro_katana.title": "Samurái Maestro",
+      "item.klv.pico_kailand": "Pico Mistico",
+      "item.klv.casco_de_warden_helmet": "Casco de Warden",
+      "gui.klv.admin_gui.button_desatado": "DESATADO",
+      "key.klv.doble_salto": "Doble Salto",
+      "gui.klv.admin_gui.button_dar_bloque_de_luz": "Dar bloque de luz",
+      "gui.klv.admin_gui.button_quitarefectos": "QuitarEfectos",
+      "gui.klv.gui_deseos.button_obten_la_cuchilla": "Obten la Cuchilla",
+      "advancements.corazon_de_warden_logro.title": "Corazón Oscuro",
+      "item.klv.moneda_amatista": "Moneda Amatista",
+      "advancements.logro_moneda_rubi.descr": "Consigue una moneda Kailand de Amatista",
+      "item.klv.casco_de_warden_chestplate": "Pechera de Warden",
+      "item.klv.hacha_nordica": "Hacha Nordica",
+      "advancements.logro_guadana.descr": "Consigue una Guadaña",
+      "advancements.logro_varita_deseos.descr": "Consigue una Varita de los deseos",
+      "advancements.logro_guadana.title": "Segador Implacable",
+      "item.klv.mjolnir": "Mjolnir",
+      "advancements.lorgo_mjonlir.title": "Digno Entre los Dioses",
+      "block.klv.mineral_mistico": "Mineral Mistico",
+      "advancements.lorgo_mjonlir.descr": "Consigue un Mjonlir",
+      "gui.klv.admin_gui.button_spawn": "Lobby",
+      "advancements.logro_hacha_nordica.descr": "Consigue un Hacha nordica",
+      "item.klv.espada_sonica": "Espada Sonica",
+      "item.klv.espada_shulker": "Espada Shulker",
+      "item.klv.venas_de_warden": "Venas de Warden",
+      "item.klv.botas_agiles_boots": "Botas Agiles Botas",
+      "subtitles.katanasound": "Katana",
+      "gui.klv.admin_gui.button_dar_pocion_grabadora": "Dar Poción grabadora",
+      "gui.klv.admin_gui.button_empty": "Rayos",
+      "item.klv.prisma": "Prisma",
+      "item.klv.varita_de_los_deseos": "Varita De Los Deseos",
+      "item.klv.gema_kailand": "Gema Mistica",
+      "advancements.logro_tsuke.title": "Legado del Corte",
+      "advancements.corazon_de_warden_logro.descr": "Consigue el corazón de un Warden",
+      "item.klv.baculo_dorado": "Báculo Dorado",
+      "advancements.logro_moneda_rubi.title": "Amatista Maestra de los Tesoros",
+      "effect.klv.sensor_de_entidades": "Sensor de Entidades",
+      "gui.klv.gui_deseos.button_inmortalidad_por_5_minutos": "Dios por 5 minutos",
+      "effect.klv.cooldown_cadenas_de_luz": "Cooldown Cadenas de Luz"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
+  "workspaceSettings": {
+    "modid": "klv",
+    "modName": "Kailand",
+    "version": "4.1",
+    "description": "Mod hecho para Kailand",
+    "author": "zParkk",
+    "websiteURL": "https://mcreator.net",
+    "license": "Academic Free License v3.0",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.19.2",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "modElementsPackage": "net.mcreator.klv",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202300224119
+}

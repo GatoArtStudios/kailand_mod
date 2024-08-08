@@ -1,0 +1,11 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "leviatanaxetextures",
+        "1": "leviatanaxetexturesrunicas"
+      },
+      "name": "default"
+    }
+  }
+}

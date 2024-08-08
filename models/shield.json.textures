@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "riot_shield"
+      },
+      "name": "default"
+    }
+  }
+}

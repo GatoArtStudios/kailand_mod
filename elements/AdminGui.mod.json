@@ -1,0 +1,106 @@
+{
+  "_fv": 43,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 236,
+    "height": 133,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "button",
+        "data": {
+          "name": "button_inmortalidad",
+          "text": "Inmortalidad",
+          "onClick": {
+            "name": "AdminInmortal"
+          },
+          "width": 88,
+          "height": 20,
+          "x": 100,
+          "y": 88
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_saturacion",
+          "text": "Saturacion",
+          "onClick": {
+            "name": "AdminSaturacion"
+          },
+          "width": 77,
+          "height": 20,
+          "x": 100,
+          "y": 138
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_invisible",
+          "text": "Invisible",
+          "onClick": {
+            "name": "AdminInvisible"
+          },
+          "width": 72,
+          "height": 20,
+          "x": 100,
+          "y": 113
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_quitarefectos",
+          "text": "QuitarEfectos",
+          "onClick": {
+            "name": "AdminQuitarEfecto"
+          },
+          "width": 93,
+          "height": 20,
+          "x": 100,
+          "y": 63
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_vision_nocturna",
+          "text": "Visión Nocturna",
+          "onClick": {
+            "name": "DarVisionNocturna"
+          },
+          "width": 103,
+          "height": 20,
+          "x": 100,
+          "y": 163
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_vanish",
+          "text": "Vanish",
+          "onClick": {
+            "name": "VanishProcedure"
+          },
+          "width": 56,
+          "height": 20,
+          "x": 199,
+          "y": 63
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 11,
+      "sy": 10,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": true
+    }
+  }
+}

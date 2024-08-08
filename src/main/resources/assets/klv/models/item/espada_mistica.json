@@ -1,0 +1,7 @@
+{
+  "parent": "klv:custom/mistsplitter_reforged",
+  "textures": {
+    "0": "klv:blocks/mistsplitter_reforged",
+    "particle": "klv:items/shulker_sword"
+  }
+}

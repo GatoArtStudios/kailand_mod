@@ -1,0 +1,11 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "staff_black_snake_staff": "staff_black_snake_staff",
+        "charging": "staff_black_snake_staff_e"
+      },
+      "name": "default"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "minecraft:netherite_chestplate"
+  },
+  "addition": {
+    "item": "klv:corazon_del_warden"
+  },
+  "result": {
+    "item": "klv:casco_de_warden_chestplate"
+  }
+}

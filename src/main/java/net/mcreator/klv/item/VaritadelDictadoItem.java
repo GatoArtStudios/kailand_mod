@@ -1,74 +1,76 @@
 package net.mcreator.klv.item;
 
-import com.google.common.collect.ImmutableMultimap;
-import com.google.common.collect.Multimap;
-import java.util.List;
-import net.mcreator.klv.init.KlvModTabs;
-import net.mcreator.klv.procedures.SimonDiceProcedure;
-import net.minecraft.ChatFormatting;
-import net.minecraft.network.chat.Component;
-import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResultHolder;
-import net.minecraft.world.entity.EquipmentSlot;
-import net.minecraft.world.entity.ai.attributes.Attribute;
-import net.minecraft.world.entity.ai.attributes.AttributeModifier;
-import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.entity.ai.attributes.AttributeModifier.Operation;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Rarity;
-import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.level.Level;
-import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.entity.ai.attributes.Attribute;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.network.chat.Component; // Importación correcta
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.ChatFormatting; // Importación correcta
+
+import net.mcreator.klv.procedures.SimonDiceProcedure;
+import net.mcreator.klv.init.KlvModTabs;
+import com.google.common.collect.Multimap;
+import com.google.common.collect.ImmutableMultimap;
+import java.util.List;
 
 public class VaritadelDictadoItem extends Item {
     public VaritadelDictadoItem() {
-        super((new Item.Properties()).m_41491_(KlvModTabs.TAB_KL).m_41503_(3500).m_41486_().m_41497_(Rarity.EPIC));
+        super(new Item.Properties().tab(KlvModTabs.TAB_KL).durability(3500).fireResistant().rarity(Rarity.EPIC));
     }
 
-    public Multimap<Attribute, AttributeModifier> m_7167_(EquipmentSlot equipmentSlot) {
+    @Override
+    public Multimap<Attribute, AttributeModifier> getDefaultAttributeModifiers(EquipmentSlot equipmentSlot) {
         if (equipmentSlot == EquipmentSlot.MAINHAND) {
             ImmutableMultimap.Builder<Attribute, AttributeModifier> builder = ImmutableMultimap.builder();
-            builder.putAll(super.m_7167_(equipmentSlot));
-            builder.put(Attributes.f_22281_, new AttributeModifier(f_41374_, "Item modifier", 4.0, Operation.ADDITION));
-            builder.put(Attributes.f_22283_, new AttributeModifier(f_41375_, "Item modifier", -2.4, Operation.ADDITION));
+            builder.putAll(super.getDefaultAttributeModifiers(equipmentSlot));
+            builder.put(Attributes.ATTACK_DAMAGE, new AttributeModifier(BASE_ATTACK_DAMAGE_UUID, "Item modifier", 4d, AttributeModifier.Operation.ADDITION));
+            builder.put(Attributes.ATTACK_SPEED, new AttributeModifier(BASE_ATTACK_SPEED_UUID, "Item modifier", -2.4, AttributeModifier.Operation.ADDITION));
             return builder.build();
-        } else {
-            return super.m_7167_(equipmentSlot);
         }
+        return super.getDefaultAttributeModifiers(equipmentSlot);
     }
 
+    @Override
     @OnlyIn(Dist.CLIENT)
-    public boolean m_5812_(ItemStack itemstack) {
+    public boolean isFoil(ItemStack itemstack) {
         return true;
     }
 
-    public Component m_7626_(ItemStack stack) {
-        return Component.m_237113_("Varita del Dictado");
+    @Override
+    public Component getName(ItemStack stack) {
+        return Component.literal("Varita del Dictado");
     }
 
-    public InteractionResultHolder<ItemStack> m_7203_(Level world, Player entity, InteractionHand hand) {
-        ItemStack itemstack = entity.m_21120_(hand);
-        if (!world.f_46443_) {
-            List<Player> playersInRadius = world.m_45976_(Player.class, entity.m_20191_().m_82400_(5.0));
-            if (playersInRadius.size() > 1) {
-                SimonDiceProcedure.execute(world, entity.m_20185_(), entity.m_20186_(), entity.m_20189_(), entity);
-                itemstack.m_41622_(25, entity, (e) -> {
-                    e.m_21190_(hand);
-                });
-                entity.m_36335_().m_41524_(this, 900);
+    @Override
+    public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
+        ItemStack itemstack = entity.getItemInHand(hand);
+        if (!world.isClientSide) {
+            List<Player> playersInRadius = world.getEntitiesOfClass(Player.class, entity.getBoundingBox().inflate(5));
+
+            if (playersInRadius.size() > 1) { // Más de 1 para excluir al jugador que usa la varita
+                SimonDiceProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity);
+                itemstack.hurtAndBreak(25, entity, e -> e.broadcastBreakEvent(hand));
+                entity.getCooldowns().addCooldown(this, 900); // Añadir cooldown de 45 segundos (900 ticks)
             } else {
-                entity.m_5661_(Component.m_237113_("No hay jugadores cercanos."), true);
+                entity.displayClientMessage(Component.literal("No hay jugadores cercanos."), true);
             }
         }
-
-        return InteractionResultHolder.m_19090_(itemstack);
+        return InteractionResultHolder.success(itemstack);
     }
 
-    public void m_7373_(ItemStack stack, Level world, List<Component> tooltip, TooltipFlag flag) {
-        super.m_7373_(stack, world, tooltip, flag);
-        tooltip.add(Component.m_237113_("Este \u00edtem da \u00f3rdenes a los jugadores en un radio de 5x5. Si fallan la orden, pierden vida.").m_130940_(ChatFormatting.GRAY));
+    @Override
+    public void appendHoverText(ItemStack stack, Level world, List<Component> tooltip, TooltipFlag flag) {
+        super.appendHoverText(stack, world, tooltip, flag);
+        tooltip.add(Component.literal("Este ítem da órdenes a los jugadores en un radio de 5x5. Si fallan la orden, pierden vida.").withStyle(ChatFormatting.GRAY));
     }
 }

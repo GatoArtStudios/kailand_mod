@@ -1,0 +1,7 @@
+{
+  "parent": "klv:custom/mjolnirnew",
+  "textures": {
+    "1": "klv:blocks/martillothortexture",
+    "particle": "klv:items/mjonlirlanzar"
+  }
+}

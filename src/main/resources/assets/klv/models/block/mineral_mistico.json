@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "klv:blocks/mistic_ore",
+    "up": "klv:blocks/mistic_ore",
+    "north": "klv:blocks/mistic_ore",
+    "east": "klv:blocks/mistic_ore",
+    "south": "klv:blocks/mistic_ore",
+    "west": "klv:blocks/mistic_ore",
+    "particle": "klv:blocks/mistic_ore"
+  },
+  "render_type": "solid"
+}

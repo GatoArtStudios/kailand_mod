@@ -1,0 +1,36 @@
+{
+  "display": {
+    "icon": {
+      "item": "klv:mjolnir"
+    },
+    "title": {
+      "translate": "advancements.lorgo_mjonlir.title"
+    },
+    "description": {
+      "translate": "advancements.lorgo_mjonlir.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "lorgo_mjonlir": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "klv:mjolnir"
+            ],
+            "count": {
+              "min": 1,
+              "max": 64
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "klv:logro_moneda"
+}

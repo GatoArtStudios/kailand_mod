@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "klv:venas_de_warden"
+    },
+    "1": {
+      "item": "klv:venas_de_warden"
+    },
+    "2": {
+      "item": "klv:venas_de_warden"
+    },
+    "3": {
+      "item": "klv:venas_de_warden"
+    },
+    "4": {
+      "item": "klv:venas_de_warden"
+    },
+    "5": {
+      "item": "klv:venas_de_warden"
+    },
+    "6": {
+      "item": "klv:venas_de_warden"
+    },
+    "7": {
+      "item": "klv:venas_de_warden"
+    },
+    "8": {
+      "item": "klv:venas_de_warden"
+    }
+  },
+  "result": {
+    "item": "klv:corazon_del_warden",
+    "count": 1
+  }
+}

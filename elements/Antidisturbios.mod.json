@@ -1,0 +1,40 @@
+{
+  "_fv": 43,
+  "_type": "rangeditem",
+  "definition": {
+    "renderType": 1,
+    "texture": "riot_shield",
+    "customModelName": "shield_block:default",
+    "name": "Antidisturbios",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:KL"
+    },
+    "stackSize": 1,
+    "ammoItem": {
+      "value": ""
+    },
+    "shootConstantly": false,
+    "usageCount": 3200,
+    "actionSound": {
+      "value": ""
+    },
+    "hasGlow": false,
+    "animation": "block",
+    "enableMeleeDamage": false,
+    "damageVsEntity": 0.0,
+    "useCondition": {
+      "name": "AntidisturbiosCanUseRangedItem"
+    },
+    "bulletPower": 1.0,
+    "bulletDamage": 5.0,
+    "bulletKnockback": 5,
+    "bulletParticles": false,
+    "bulletIgnitesFire": false,
+    "bulletItemTexture": {
+      "value": "Blocks.AIR"
+    },
+    "bulletModel": "Default",
+    "customBulletModelTexture": ""
+  }
+}

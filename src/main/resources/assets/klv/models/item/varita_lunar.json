@@ -1,0 +1,7 @@
+{
+  "parent": "klv:custom/moon_staff",
+  "textures": {
+    "2": "klv:blocks/moon_staff",
+    "particle": "klv:items/staff_yumi_stand"
+  }
+}

@@ -1,14 +1,26 @@
+
+/*
+ *    MCreator note: This file will be REGENERATED on each build.
+ */
 package net.mcreator.klv.init;
 
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.CreativeModeTab;
 
 public class KlvModTabs {
-    public static CreativeModeTab TAB_KL;
+	public static CreativeModeTab TAB_KL;
 
-    public KlvModTabs() {
-    }
+	public static void load() {
+		TAB_KL = new CreativeModeTab("tabkl") {
+			@Override
+			public ItemStack makeIcon() {
+				return new ItemStack(KlvModItems.MONEDA_ROTA.get());
+			}
 
-    public static void load() {
-        TAB_KL = new 1("tabkl");
-    }
+			@Override
+			public boolean hasSearchBar() {
+				return false;
+			}
+		};
+	}
 }

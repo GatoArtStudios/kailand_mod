@@ -1,0 +1,7 @@
+{
+  "parent": "klv:custom/shield_block",
+  "textures": {
+    "1": "klv:blocks/riot_shield",
+    "particle": "klv:items/riot_shield"
+  }
+}

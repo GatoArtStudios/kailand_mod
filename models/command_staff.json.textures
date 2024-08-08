@@ -1,0 +1,12 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "staff",
+        "1": "command_block",
+        "missing": ""
+      },
+      "name": "default"
+    }
+  }
+}

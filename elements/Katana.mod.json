@@ -1,0 +1,32 @@
+{
+  "_fv": 43,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "katanita",
+    "customModelName": "Normal",
+    "name": "Katana",
+    "specialInfo": [
+      "§7Esta katana permite realizar un dash que impulsa al jugador hacia adelante rápidamente"
+    ],
+    "creativeTab": {
+      "value": "CUSTOM:KL"
+    },
+    "toolType": "Sword",
+    "harvestLevel": 1,
+    "efficiency": 4.0,
+    "attackSpeed": 1.4000000000000001,
+    "enchantability": 25,
+    "damageVsEntity": 14.5,
+    "usageCount": 2100,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [],
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onRightClickedInAir": {
+      "name": "DashKatana"
+    }
+  }
+}

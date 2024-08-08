@@ -1,0 +1,13 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "texturekatana1",
+        "1": "texturekatana2",
+        "2": "texturekatana3",
+        "missing": ""
+      },
+      "name": "default"
+    }
+  }
+}

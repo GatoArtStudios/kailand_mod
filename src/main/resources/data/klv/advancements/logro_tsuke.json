@@ -1,0 +1,36 @@
+{
+  "display": {
+    "icon": {
+      "item": "klv:tsuke"
+    },
+    "title": {
+      "translate": "advancements.logro_tsuke.title"
+    },
+    "description": {
+      "translate": "advancements.logro_tsuke.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "logro_tsuke": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "klv:tsuke"
+            ],
+            "count": {
+              "min": 1,
+              "max": 64
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "klv:logro_moneda"
+}

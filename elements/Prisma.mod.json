@@ -1,0 +1,47 @@
+{
+  "_fv": 43,
+  "_type": "item",
+  "definition": {
+    "renderType": 0,
+    "texture": "bens_new_bliss_smp_gem_for_waternetwork",
+    "customModelName": "Normal",
+    "name": "Prisma",
+    "rarity": "EPIC",
+    "creativeTab": {
+      "value": "CUSTOM:KL"
+    },
+    "stackSize": 1,
+    "enchantability": 0,
+    "useDuration": 0,
+    "toolType": 1.0,
+    "damageCount": 0,
+    "recipeRemainder": {
+      "value": ""
+    },
+    "destroyAnyBlock": false,
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "enableMeleeDamage": false,
+    "damageVsEntity": 0.0,
+    "specialInfo": [
+      "Este prisma otorga inmortalidad al jugador durante 5 segundos al activarse"
+    ],
+    "hasGlow": true,
+    "guiBoundTo": "<NONE>",
+    "inventorySize": 9,
+    "inventoryStackSize": 64,
+    "onRightClickedInAir": {
+      "name": "PrismaCuandoSeHaceClicConElBotonDerecho"
+    },
+    "isFood": false,
+    "nutritionalValue": 4,
+    "saturation": 0.3,
+    "eatResultItem": {
+      "value": ""
+    },
+    "isMeat": false,
+    "isAlwaysEdible": false,
+    "animation": "none"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "_fv": 43,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "vampire_blade",
+    "customModelName": "Normal",
+    "name": "Espada vampírica",
+    "specialInfo": [
+      "§7Esta espada tiene una mínima posibilidad de otorgar medio corazón de vida al jugador al golpear"
+    ],
+    "creativeTab": {
+      "value": "CUSTOM:KL"
+    },
+    "toolType": "Sword",
+    "harvestLevel": 1,
+    "efficiency": 4.0,
+    "attackSpeed": 1.5,
+    "enchantability": 24,
+    "damageVsEntity": 11.5,
+    "usageCount": 2850,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [],
+    "immuneToFire": true,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onEntityHitWith": {
+      "name": "RobaVidaProcedure"
+    }
+  }
+}

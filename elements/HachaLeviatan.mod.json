@@ -1,0 +1,32 @@
+{
+  "_fv": 43,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "leviathan_kratos_axe_in_god_of_war",
+    "customModelName": "Normal",
+    "name": "Hacha Leviatán",
+    "specialInfo": [
+      "§7Esta hacha lanza rayos a enemigos cercanos y otorga efectos positivos al jugador durante unos segundos"
+    ],
+    "creativeTab": {
+      "value": "CUSTOM:KL"
+    },
+    "toolType": "Axe",
+    "harvestLevel": 1,
+    "efficiency": 4.0,
+    "attackSpeed": 1.0,
+    "enchantability": 25,
+    "damageVsEntity": 20.0,
+    "usageCount": 2300,
+    "blocksAffected": [],
+    "hasGlow": true,
+    "repairItems": [],
+    "immuneToFire": true,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onRightClickedInAir": {
+      "name": "HachaLeviatanProcedure"
+    }
+  }
+}

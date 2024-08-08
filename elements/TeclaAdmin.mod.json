@@ -1,0 +1,12 @@
+{
+  "_fv": 43,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "F7",
+    "keyBindingName": "Menú de Admin",
+    "keyBindingCategoryKey": "inventory",
+    "onKeyPressed": {
+      "name": "AbrirGUIAdmin"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "staff_holy_celtic_staff": "staff_holy_celtic_staff"
+      },
+      "name": "default"
+    }
+  }
+}

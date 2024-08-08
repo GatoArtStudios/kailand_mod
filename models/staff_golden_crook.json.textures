@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "staff_golden_crook": "staff_golden_crook"
+      },
+      "name": "default"
+    }
+  }
+}

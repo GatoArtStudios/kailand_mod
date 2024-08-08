@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:netherite_block"
+    },
+    "1": {
+      "item": "klv:gema_kailand"
+    },
+    "2": {
+      "item": "minecraft:netherite_block"
+    },
+    "3": {
+      "item": "klv:gema_kailand"
+    },
+    "4": {
+      "item": "minecraft:nether_star"
+    },
+    "5": {
+      "item": "klv:gema_kailand"
+    },
+    "6": {
+      "item": "minecraft:netherite_block"
+    },
+    "7": {
+      "item": "klv:gema_kailand"
+    },
+    "8": {
+      "item": "minecraft:netherite_block"
+    }
+  },
+  "result": {
+    "item": "klv:prisma",
+    "count": 1
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "_fv": 43,
+  "_type": "tool",
+  "definition": {
+    "renderType": 1,
+    "texture": "mazo_heroico",
+    "customModelName": "obsidian_hammer:default",
+    "name": "Mazo Heroico",
+    "specialInfo": [
+      "al usar clic derecho otorga una habilidad que al momento de golpear a una entidad ignorara totalmente su armadura"
+    ],
+    "creativeTab": {
+      "value": "CUSTOM:KL"
+    },
+    "toolType": "Axe",
+    "harvestLevel": 1,
+    "efficiency": 4.0,
+    "attackSpeed": 0.7999999999999999,
+    "enchantability": 2,
+    "damageVsEntity": 16.0,
+    "usageCount": 3200,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [],
+    "immuneToFire": true,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onRightClickedInAir": {
+      "name": "MazoHeroicoCuandoSeHaceClicConElBotonDerecho"
+    },
+    "onEntityHitWith": {
+      "name": "MazoHeroicoAlEntidadSerGolpeadaConLaHerramienta"
+    }
+  }
+}

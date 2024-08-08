@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "minecraft:netherite_sword"
+  },
+  "addition": {
+    "item": "minecraft:shulker_shell"
+  },
+  "result": {
+    "item": "klv:espada_shulker"
+  }
+}

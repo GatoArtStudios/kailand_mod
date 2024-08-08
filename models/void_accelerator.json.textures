@@ -1,0 +1,13 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "handle",
+        "1": "extra",
+        "2": "wire",
+        "4": "chamber"
+      },
+      "name": "default"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "_fv": 43,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "netherite_picaxe",
+    "customModelName": "Normal",
+    "name": "Pico Mistico",
+    "specialInfo": [
+      "§7Este pico funde automáticamente los minerales al romperlos"
+    ],
+    "creativeTab": {
+      "value": "CUSTOM:KL"
+    },
+    "toolType": "Pickaxe",
+    "harvestLevel": 4,
+    "efficiency": 20.0,
+    "attackSpeed": 1.2000000000000002,
+    "enchantability": 30,
+    "damageVsEntity": 7.0,
+    "usageCount": 3500,
+    "blocksAffected": [],
+    "hasGlow": true,
+    "repairItems": [],
+    "immuneToFire": true,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onBlockDestroyedWithTool": {
+      "name": "AutoFundicionProcedure"
+    }
+  }
+}

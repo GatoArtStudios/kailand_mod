@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "klv:blocks/block_velox",
+    "up": "klv:blocks/block_velox",
+    "north": "klv:blocks/block_velox",
+    "east": "klv:blocks/block_velox",
+    "south": "klv:blocks/block_velox",
+    "west": "klv:blocks/block_velox",
+    "particle": "klv:blocks/block_velox"
+  },
+  "render_type": "solid"
+}

@@ -1,0 +1,12 @@
+{
+  "_fv": 43,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "SPACE",
+    "keyBindingName": "Doble Salto",
+    "keyBindingCategoryKey": "movement",
+    "onKeyPressed": {
+      "name": "DobleSaltoAlSerPresionada"
+    }
+  }
+}

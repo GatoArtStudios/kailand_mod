@@ -1,0 +1,27 @@
+{
+  "_fv": 43,
+  "_type": "tool",
+  "definition": {
+    "renderType": 1,
+    "texture": "shulker_sword",
+    "customModelName": "key_of_khaj_nisut:default",
+    "name": "Furia Infernal",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:KL"
+    },
+    "toolType": "Sword",
+    "harvestLevel": 1,
+    "efficiency": 4.0,
+    "attackSpeed": 1.0,
+    "enchantability": 25,
+    "damageVsEntity": 16.5,
+    "usageCount": 2300,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [],
+    "immuneToFire": true,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

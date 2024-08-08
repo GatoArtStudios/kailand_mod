@@ -1,0 +1,12 @@
+{
+  "_fv": 43,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "F6",
+    "keyBindingName": "Vanish",
+    "keyBindingCategoryKey": "multiplayer",
+    "onKeyPressed": {
+      "name": "VanishProcedure"
+    }
+  }
+}

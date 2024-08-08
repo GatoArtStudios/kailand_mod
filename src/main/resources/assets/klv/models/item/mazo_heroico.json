@@ -1,0 +1,7 @@
+{
+  "parent": "klv:custom/obsidian_hammer",
+  "textures": {
+    "0": "klv:blocks/obsidian_hammer",
+    "particle": "klv:items/mazo_heroico"
+  }
+}

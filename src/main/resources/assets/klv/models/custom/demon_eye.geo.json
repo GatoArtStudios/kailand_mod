@@ -1,0 +1,271 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:geometry": [
+    {
+      "description": {
+        "identifier": "geometry.demon_eye",
+        "texture_width": 32,
+        "texture_height": 32,
+        "visible_bounds_width": 3,
+        "visible_bounds_height": 1.5,
+        "visible_bounds_offset": [
+          0,
+          0.25,
+          0
+        ]
+      },
+      "bones": [
+        {
+          "name": "demon_eye",
+          "pivot": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "head",
+          "parent": "demon_eye",
+          "pivot": [
+            0,
+            2.5,
+            1.2
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -3,
+                0,
+                -3
+              ],
+              "size": [
+                6,
+                6,
+                6
+              ],
+              "uv": [
+                0,
+                0
+              ]
+            },
+            {
+              "origin": [
+                -3.7,
+                -0.5,
+                -3.5
+              ],
+              "size": [
+                7.2,
+                7.2,
+                7.2
+              ],
+              "inflate": -0.2,
+              "uv": [
+                0,
+                18
+              ]
+            }
+          ]
+        },
+        {
+          "name": "apendices",
+          "parent": "head",
+          "pivot": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "strings",
+          "parent": "apendices",
+          "pivot": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "red_string",
+          "parent": "strings",
+          "pivot": [
+            3,
+            2.5,
+            4.2
+          ],
+          "cubes": [
+            {
+              "origin": [
+                3,
+                3,
+                3
+              ],
+              "size": [
+                0,
+                3,
+                6
+              ],
+              "uv": [
+                0,
+                6
+              ]
+            }
+          ]
+        },
+        {
+          "name": "red_string2",
+          "parent": "strings",
+          "pivot": [
+            3,
+            -0.5,
+            4.2
+          ],
+          "cubes": [
+            {
+              "origin": [
+                3,
+                0,
+                3
+              ],
+              "size": [
+                0,
+                3,
+                6
+              ],
+              "uv": [
+                18,
+                -3
+              ]
+            }
+          ]
+        },
+        {
+          "name": "strings2",
+          "parent": "apendices",
+          "pivot": [
+            -3,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "red_string3",
+          "parent": "strings2",
+          "pivot": [
+            0,
+            2.5,
+            4.2
+          ],
+          "cubes": [
+            {
+              "origin": [
+                0,
+                3,
+                3
+              ],
+              "size": [
+                0,
+                3,
+                6
+              ],
+              "uv": [
+                0,
+                6
+              ]
+            }
+          ]
+        },
+        {
+          "name": "red_string4",
+          "parent": "strings2",
+          "pivot": [
+            0,
+            -0.5,
+            4.2
+          ],
+          "cubes": [
+            {
+              "origin": [
+                0,
+                0,
+                3
+              ],
+              "size": [
+                0,
+                3,
+                6
+              ],
+              "uv": [
+                18,
+                -3
+              ]
+            }
+          ]
+        },
+        {
+          "name": "strings3",
+          "parent": "apendices",
+          "pivot": [
+            -6,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "red_string5",
+          "parent": "strings3",
+          "pivot": [
+            -3,
+            2.5,
+            4.2
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -3,
+                3,
+                3
+              ],
+              "size": [
+                0,
+                3,
+                6
+              ],
+              "uv": [
+                0,
+                6
+              ]
+            }
+          ]
+        },
+        {
+          "name": "red_string6",
+          "parent": "strings3",
+          "pivot": [
+            -3,
+            -0.5,
+            4.2
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -3,
+                0,
+                3
+              ],
+              "size": [
+                0,
+                3,
+                6
+              ],
+              "uv": [
+                18,
+                -3
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

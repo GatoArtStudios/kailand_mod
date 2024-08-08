@@ -1,0 +1,27 @@
+{
+  "_fv": 43,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "diamond_viking_axe",
+    "customModelName": "Normal",
+    "name": "Hacha Nordica",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:KL"
+    },
+    "toolType": "Axe",
+    "harvestLevel": 1,
+    "efficiency": 4.0,
+    "attackSpeed": 1.0,
+    "enchantability": 25,
+    "damageVsEntity": 12.5,
+    "usageCount": 1500,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [],
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

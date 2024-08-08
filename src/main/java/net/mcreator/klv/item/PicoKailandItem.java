@@ -1,38 +1,71 @@
+
 package net.mcreator.klv.item;
 
-import java.util.List;
-import net.mcreator.klv.init.KlvModTabs;
-import net.mcreator.klv.procedures.AutoFundicionProcedureProcedure;
-import net.minecraft.core.BlockPos;
-import net.minecraft.network.chat.Component;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.PickaxeItem;
-import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.api.distmarker.Dist;
+
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.PickaxeItem;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.network.chat.Component;
+import net.minecraft.core.BlockPos;
+
+import net.mcreator.klv.procedures.AutoFundicionProcedureProcedure;
+import net.mcreator.klv.init.KlvModTabs;
+
+import java.util.List;
 
 public class PicoKailandItem extends PickaxeItem {
-    public PicoKailandItem() {
-        super(new 1(), 1, -2.8F, (new Item.Properties()).m_41491_(KlvModTabs.TAB_KL).m_41486_());
-    }
+	public PicoKailandItem() {
+		super(new Tier() {
+			public int getUses() {
+				return 3500;
+			}
 
-    public boolean m_6813_(ItemStack itemstack, Level world, BlockState blockstate, BlockPos pos, LivingEntity entity) {
-        boolean retval = super.m_6813_(itemstack, world, blockstate, pos, entity);
-        AutoFundicionProcedureProcedure.execute(world, (double)pos.m_123341_(), (double)pos.m_123342_(), (double)pos.m_123343_());
-        return retval;
-    }
+			public float getSpeed() {
+				return 20f;
+			}
 
-    public void m_7373_(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
-        super.m_7373_(itemstack, world, list, flag);
-        list.add(Component.m_237113_("\u00a77Este pico funde autom\u00e1ticamente los minerales al romperlos"));
-    }
+			public float getAttackDamageBonus() {
+				return 5f;
+			}
 
-    @OnlyIn(Dist.CLIENT)
-    public boolean m_5812_(ItemStack itemstack) {
-        return true;
-    }
+			public int getLevel() {
+				return 4;
+			}
+
+			public int getEnchantmentValue() {
+				return 30;
+			}
+
+			public Ingredient getRepairIngredient() {
+				return Ingredient.of();
+			}
+		}, 1, -2.8f, new Item.Properties().tab(KlvModTabs.TAB_KL).fireResistant());
+	}
+
+	@Override
+	public boolean mineBlock(ItemStack itemstack, Level world, BlockState blockstate, BlockPos pos, LivingEntity entity) {
+		boolean retval = super.mineBlock(itemstack, world, blockstate, pos, entity);
+		AutoFundicionProcedureProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
+		return retval;
+	}
+
+	@Override
+	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
+		super.appendHoverText(itemstack, world, list, flag);
+		list.add(Component.literal("\u00A77Este pico funde autom\u00E1ticamente los minerales al romperlos"));
+	}
+
+	@Override
+	@OnlyIn(Dist.CLIENT)
+	public boolean isFoil(ItemStack itemstack) {
+		return true;
+	}
 }

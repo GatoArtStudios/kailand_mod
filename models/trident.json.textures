@@ -1,0 +1,11 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "trident",
+        "1": "trident_e"
+      },
+      "name": "default"
+    }
+  }
+}

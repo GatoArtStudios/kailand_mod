@@ -1,0 +1,7 @@
+{
+  "parent": "klv:custom/key_of_khaj_nisut",
+  "textures": {
+    "0": "klv:blocks/key_of_khaj_nisut",
+    "particle": "klv:items/shulker_sword"
+  }
+}

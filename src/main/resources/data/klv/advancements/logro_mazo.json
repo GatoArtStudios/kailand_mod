@@ -1,0 +1,36 @@
+{
+  "display": {
+    "icon": {
+      "item": "klv:mazo_heroico"
+    },
+    "title": {
+      "translate": "advancements.logro_mazo.title"
+    },
+    "description": {
+      "translate": "advancements.logro_mazo.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "logro_mazo": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "klv:mazo_heroico"
+            ],
+            "count": {
+              "min": 1,
+              "max": 64
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "klv:logro_moneda"
+}

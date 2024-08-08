@@ -20,7 +20,13 @@ build
 # other
 eclipse
 run
-gradle/
+KL.zip
 
 # Files from Forge MDK
 forge*changelog.txt
+
+run/
+.idea/
+.gradle/
+build/
+gradle/

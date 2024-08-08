@@ -1,0 +1,7 @@
+{
+  "parent": "klv:custom/staff_golden_crook",
+  "textures": {
+    "staff_golden_crook": "klv:blocks/staff_golden_crook",
+    "particle": "klv:items/staff_golden_crook"
+  }
+}

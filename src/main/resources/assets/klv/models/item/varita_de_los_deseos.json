@@ -1,0 +1,7 @@
+{
+  "parent": "klv:custom/staff_holy_celtic_staff",
+  "textures": {
+    "staff_holy_celtic_staff": "klv:blocks/staff_holy_celtic_staff",
+    "particle": "klv:items/prismatic_wand"
+  }
+}

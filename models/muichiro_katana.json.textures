@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "muichiro_katana"
+      },
+      "name": "default"
+    }
+  }
+}

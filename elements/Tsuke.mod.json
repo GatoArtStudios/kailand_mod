@@ -1,0 +1,32 @@
+{
+  "_fv": 43,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "katana",
+    "customModelName": "Normal",
+    "name": "Tsuke",
+    "specialInfo": [
+      "§7Al darle click derecho corta a las entidades cercanas"
+    ],
+    "creativeTab": {
+      "value": "CUSTOM:KL"
+    },
+    "toolType": "Sword",
+    "harvestLevel": 1,
+    "efficiency": 4.0,
+    "attackSpeed": 1.2000000000000002,
+    "enchantability": 2,
+    "damageVsEntity": 14.0,
+    "usageCount": 2100,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [],
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onRightClickedInAir": {
+      "name": "TsukeCuandoSeHaceClicConElBotonDerecho"
+    }
+  }
+}
