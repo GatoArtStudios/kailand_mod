@@ -1,4 +1,3 @@
-// Source code is decompiled from a .class file using FernFlower decompiler.
 package net.mcreator.klv.init;
 
 import net.mcreator.klv.item.AntidisturbiosItem;
