@@ -30,6 +30,8 @@ public class KlvModMobEffects {
 	public static final RegistryObject<MobEffect> COOLDOWN_AREA_REGENERATIVA = REGISTRY.register("cooldown_area_regenerativa", () -> new CooldownAreaRegenerativaMobEffect());
 	public static final RegistryObject<MobEffect> COOLDOWN_CADENAS_DE_LUZ = REGISTRY.register("cooldown_cadenas_de_luz", () -> new CooldownCadenasDeLuzMobEffect());
 	public static final RegistryObject<MobEffect> COOLDOWN_CAMBIO = REGISTRY.register("cooldown_cambio", () -> new CooldownCambioMobEffect());
-	public static final RegistryObject<MobEffect> COOLDOWN_ALIENTO_DE_DRAGON = REGISTRY.register("cooldown_aliento_de_dragon", () -> new CooldownAlientoDeDragonMobEffect());
-	public static final RegistryObject<MobEffect> COOLDOWN_CORTE_FUGAZ = REGISTRY.register("cooldown_corte_fugaz", () -> new CooldownCorteFugazMobEffect());
+//	public static final RegistryObject<MobEffect> COOLDOWN_ALIENTO_DE_DRAGON = REGISTRY.register("cooldown_aliento_de_dragon", () -> new CooldownAlientoDeDragonMobEffect());
+	public static final RegistryObject<MobEffect> COOLDOWN_ALIENTO_DE_DRAGON = REGISTRY.register("cooldown_aliento_de_dragon", () -> new CooldownMobEffect());
+//	public static final RegistryObject<MobEffect> COOLDOWN_CORTE_FUGAZ = REGISTRY.register("cooldown_corte_fugaz", () -> new CooldownCorteFugazMobEffect());
+	public static final RegistryObject<MobEffect> COOLDOWN_CORTE_FUGAZ = REGISTRY.register("cooldown_corte_fugaz", () -> new CooldownMobEffect());
 }

@@ -4,6 +4,8 @@
  */
 package net.mcreator.klv.init;
 
+import net.mcreator.klv.world.inventory.AdminGuiMenu;
+import net.mcreator.klv.world.inventory.GUIDeseosMenu;
 import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.DeferredRegister;
