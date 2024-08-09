@@ -6,9 +6,9 @@ license="Academic Free License v3.0"
 modId="klv"
 version="4.1"
 displayName="Kailand"
-credits="Created using mod maker MCreator - https://mcreator.net/about"
-displayURL="https://mcreator.net"
-authors="zParkk"
+credits="Refactorizado por Kailand"
+displayURL="https://www.kailand.es/"
+authors="Kailand"
 description="Mod hecho para Kailand"
 
 [[dependencies.klv]]
