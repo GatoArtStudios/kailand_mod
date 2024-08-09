@@ -73,7 +73,7 @@ public class FuriaInfernalProcedureProcedure {
         // Crear una onda expansiva hacia enfrente del jugador
         double explosionX = x + direction.getStepX() * 2;
         double explosionZ = z + direction.getStepZ() * 2;
-        world.explode(player, explosionX, y, explosionZ, 4.0F, Explosion.BlockInteraction.NONE);
+        world.explode(player, explosionX, y, explosionZ, 8.0F, Explosion.BlockInteraction.NONE);
 
         // Programar la eliminación de los bloques después de 25 segundos (500 ticks)
         scheduler.schedule(() -> {
