@@ -1,5 +1,6 @@
 package net.mcreator.klv.procedures;
 
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.registries.ForgeRegistries;
 
 import net.minecraft.world.level.block.Blocks;
@@ -80,12 +81,15 @@ public class ParedGloo2Procedure {
             for (BlockPos pos : placedBlocks) {
                 if (pos != null && world.getBlockState(pos).getBlock() == Blocks.END_STONE) {
                     if (world instanceof ServerLevel serverWorld) {
-                        serverWorld.sendParticles(ParticleTypes.SMOKE, pos.getX(), pos.getY(), pos.getZ(), 10, 0.5, 0.5, 0.5, 0.0);
-                        serverWorld.setBlock(pos, Blocks.AIR.defaultBlockState(), 3);
-                    } else if (world instanceof Level level) {
-                        level.sendBlockUpdated(pos, Blocks.END_STONE.defaultBlockState(), Blocks.AIR.defaultBlockState(), 3);
-                        level.setBlock(pos, Blocks.AIR.defaultBlockState(), 3);
-                        level.addParticle(ParticleTypes.SMOKE, pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5, 0.0, 0.0, 0.0);
+                        // Elimina los bloques
+                        try {
+                            // true si quiere notificar al usuario que los bloques han sido eliminados
+                            serverWorld.setBlock(pos, Blocks.AIR.defaultBlockState(), 3);
+                        } catch (Exception e) {
+                            // Ignoramos el error.
+                        }
+                        // Genera particulas de humo
+                        serverWorld.sendParticles(ParticleTypes.SMOKE, pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5, 10, 0.5, 0.5, 0.5, 0.0);
                     }
                 }
             }

@@ -76,12 +76,17 @@ public class FuriaInfernalProcedureProcedure {
         world.explode(player, explosionX, y, explosionZ, 4.0F, Explosion.BlockInteraction.NONE);
 
         // Programar la eliminación de los bloques después de 25 segundos (500 ticks)
-        if (world instanceof ServerLevel) {
-            scheduler.schedule(() -> {
-                for (BlockPos pos : blockPositions) {
-                    world.setBlock(pos, Blocks.AIR.defaultBlockState(), 3);
+        scheduler.schedule(() -> {
+            for (BlockPos pos : blockPositions) {
+                if (world instanceof ServerLevel serverWorld) {
+                    // Eliminamos los bloques
+                    try {
+                        serverWorld.setBlock(pos, Blocks.AIR.defaultBlockState(), 3);
+                    } catch (Exception e) {
+                        // Ignoramos el error.
+                    }
                 }
-            }, 25, TimeUnit.SECONDS);
-        }
+            }
+        }, 25, TimeUnit.SECONDS);
     }
 }
