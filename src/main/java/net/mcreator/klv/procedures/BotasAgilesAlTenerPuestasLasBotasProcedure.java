@@ -12,6 +12,6 @@ public class BotasAgilesAlTenerPuestasLasBotasProcedure {
 		if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
 			_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 70, 0, false, false));
 		if (entity instanceof LivingEntity _entity && !_entity.level.isClientSide())
-			_entity.addEffect(new MobEffectInstance(MobEffects.DOLPHINS_GRACE, 70, 0, false, false));
+			_entity.addEffect(new MobEffectInstance(MobEffects.DOLPHINS_GRACE, 70, 1, false, false));
 	}
 }
