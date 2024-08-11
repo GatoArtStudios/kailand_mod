@@ -32,7 +32,7 @@ public abstract class BotasAgilesItem extends ArmorItem {
 
 			@Override
 			public int getDefenseForSlot(EquipmentSlot slot) {
-				return new int[]{0, 0, 0, 5}[slot.getIndex()];
+				return new int[]{4, 0, 0, 5}[slot.getIndex()];
 			}
 
 			@Override
