@@ -54,7 +54,8 @@ public class TsukeCuandoSeHaceClicConElBotonDerechoProcedure {
 					List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(8 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
 							.collect(Collectors.toList());
 					for (Entity entityiterator : _entfound) {
-						if (entity.getPersistentData().getDouble("CurrentTarget") == entityiterator.getPersistentData().getDouble("TargetQueue")) {
+						// !(entityiterator == entity) && evita que el jugador se haga danio a si mismo
+						if (!(entityiterator == entity) && entity.getPersistentData().getDouble("CurrentTarget") == entityiterator.getPersistentData().getDouble("TargetQueue")) {
 							if (world instanceof ServerLevel _level)
 								_level.sendParticles(ParticleTypes.CRIT, x, (y + 1), z, 15, 0, 0, 0, 1.5);
 							if (world instanceof Level _level) {
