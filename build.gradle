@@ -10,7 +10,7 @@ buildscript {
 apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 
-version = '5.3'
+version = '5.4'
 group = 'net.mcreator.klv'
 archivesBaseName = 'Kailand_Mod'
 
