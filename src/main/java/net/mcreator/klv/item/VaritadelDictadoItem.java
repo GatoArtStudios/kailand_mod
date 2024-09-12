@@ -1,5 +1,6 @@
 package net.mcreator.klv.item;
 
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.world.level.Level;
@@ -55,14 +56,16 @@ public class VaritadelDictadoItem extends Item {
     public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
         ItemStack itemstack = entity.getItemInHand(hand);
         if (!world.isClientSide) {
-            List<Player> playersInRadius = world.getEntitiesOfClass(Player.class, entity.getBoundingBox().inflate(5));
+            if (entity instanceof ServerPlayer ServerPlayer) {
+                List<Player> playersInRadius = world.getEntitiesOfClass(Player.class, entity.getBoundingBox().inflate(5));
 
-            if (playersInRadius.size() > 1) { // Más de 1 para excluir al jugador que usa la varita
-                SimonDiceProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity);
-                itemstack.hurtAndBreak(25, entity, e -> e.broadcastBreakEvent(hand));
-                entity.getCooldowns().addCooldown(this, 900); // Añadir cooldown de 45 segundos (900 ticks)
-            } else {
-                entity.displayClientMessage(Component.literal("No hay jugadores cercanos."), true);
+                if (playersInRadius.size() > 1) { // Más de 1 para excluir al jugador que usa la varita
+                    SimonDiceProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), ServerPlayer);
+                    itemstack.hurtAndBreak(25, entity, e -> e.broadcastBreakEvent(hand));
+                    entity.getCooldowns().addCooldown(this, 900); // Añadir cooldown de 45 segundos (900 ticks)
+                } else {
+                    entity.displayClientMessage(Component.literal("No hay jugadores cercanos."), true);
+                }
             }
         }
         return InteractionResultHolder.success(itemstack);
