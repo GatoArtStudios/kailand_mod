@@ -7,6 +7,7 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraftforge.event.TickEvent;
+import net.minecraftforge.event.entity.item.ItemTossEvent;
 import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.event.entity.player.PlayerContainerEvent;
@@ -84,28 +85,46 @@ public class SimonDiceProcedure {
 
             @SubscribeEvent
             public void onPlayerJump(LivingEvent.LivingJumpEvent event) {
-                if (event.getEntity() instanceof Player && playersToCheck.contains(event.getEntity())) {
+                player.displayClientMessage(Component.literal("Has saltado exitosamente"), true);
+                if (event.getEntity() instanceof Player && playersToCheck.contains(event.getEntity()) && order == 3) {
                     playerActions.put(event.getEntity().getUUID(), true);
                 }
             }
 
             @SubscribeEvent
             public void onPlayerSwing(PlayerInteractEvent.LeftClickEmpty event) {
-                if (event.getEntity() instanceof Player && playersToCheck.contains(event.getEntity())) {
+                player.displayClientMessage(Component.literal("Has pegado al aire"), true);
+                if (event.getEntity() instanceof Player && playersToCheck.contains(event.getEntity()) && order == 2) {
                     playerActions.put(event.getEntity().getUUID(), true);
                 }
             }
 
             @SubscribeEvent
             public void onPlayerOpenContainer(PlayerContainerEvent.Open event) {
-                if (event.getEntity() instanceof Player && playersToCheck.contains(event.getEntity())) {
+                player.displayClientMessage(Component.literal("Has abierto el inventario"), true);
+                if (event.getEntity() instanceof Player && playersToCheck.contains(event.getEntity()) && order == 5) {
                     playerActions.put(event.getEntity().getUUID(), true);
                 }
             }
 
             @SubscribeEvent
             public void onPlayerChat(ServerChatEvent event) {
-                if (playersToCheck.contains(event.getPlayer())) {
+                player.displayClientMessage(Component.literal("Has escrito un mensaje en el chat"), true);
+                if (playersToCheck.contains(event.getPlayer()) && order == 6) {
+                    playerActions.put(event.getPlayer().getUUID(), true);
+                }
+            }
+            @SubscribeEvent
+            public void onTick(TickEvent.PlayerTickEvent event) {
+                player.displayClientMessage(Component.literal("Evento de entidad"), true);
+                if (order == 1 || order == 0 && playersToCheck.contains(event.player)) {
+                    playerActions.put(event.player.getUUID(), true);
+                }
+            }
+            @SubscribeEvent
+            public void onItemToss(ItemTossEvent event) {
+                player.displayClientMessage(Component.literal("Has tirado un ítem"), true);
+                if (order == 4 && playersToCheck.contains(event.getPlayer())) {
                     playerActions.put(event.getPlayer().getUUID(), true);
                 }
             }
