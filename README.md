@@ -16,3 +16,6 @@ Eventos necesarios para el porcedure, la clase padre de los eventos es **Event**
     - Method: `onPlayerTick`
 - **ItemEvent.ItemTossEvent**: Evento, Lanzar item
     - Method: `onItemToss`
+## Eventos que aun no funcionan
+- **Abrir el Inventario no lo detecta.**
+- **Dar Click izquierdo en el aire tampoco lo detecta.**

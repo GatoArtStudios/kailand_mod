@@ -3,7 +3,9 @@ package net.mcreator.klv.procedures;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.protocol.game.ClientboundSetTitleTextPacket;
 import net.minecraft.network.protocol.game.ClientboundSetTitlesAnimationPacket;
+import net.minecraft.world.Container;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.InventoryMenu;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerPlayer;
@@ -43,7 +45,6 @@ public class SimonDiceProcedure {
         if (!(world instanceof ServerLevel serverWorld)) return;
 
         int order = random.nextInt(7); // Genera un número aleatorio entre 0 y 6
-//        List<Player> playersInRadius = serverWorld.getEntitiesOfClass(Player.class, player.getBoundingBox().inflate(RADIUS));
         List<ServerPlayer> playersInRadius = serverWorld.players().stream().filter(player -> player != playerSender).filter(player -> player.distanceToSqr(playerSender) <= Math.pow(RADIUS, 2)).collect(Collectors.toList());
 
         if (playersInRadius.isEmpty()) return; // Retorna si no hay jugadores en el radio
@@ -58,43 +59,36 @@ public class SimonDiceProcedure {
                         target.playSound(SoundEvents.NOTE_BLOCK_PLING, 1.0F, 1.0F);
                         sendConfusionParticles(target);
                     }
-//                    case 0 -> sendChatMessage(target, "Tienes que agacharte");
                     case 1 -> {
                         sendOrderTitle(target, "\u00A7aMoverte");
                         target.playSound(SoundEvents.NOTE_BLOCK_PLING, 1.0F, 1.0F);
                         sendConfusionParticles(target);
                     }
-//                    case 1 -> sendChatMessage(target, "Tienes que moverte");
                     case 2 -> {
                         sendOrderTitle(target, "\u00A79Preciona clic izquierdo en el aire");
                         target.playSound(SoundEvents.NOTE_BLOCK_PLING, 1.0F, 1.0F);
                         sendConfusionParticles(target);
                     }
-//                    case 2 -> sendChatMessage(target, "Tienes que pegar al aire (clic izquierdo)");
                     case 3 -> {
                         sendOrderTitle(target, "\u00A7eSaltar");
                         target.playSound(SoundEvents.NOTE_BLOCK_PLING, 1.0F, 1.0F);
                         sendConfusionParticles(target);
                     }
-//                    case 3 -> sendChatMessage(target, "Tienes que saltar");
                     case 4 -> {
                         sendOrderTitle(target, "\u00A76Lanzar un ítem");
                         target.playSound(SoundEvents.NOTE_BLOCK_PLING, 1.0F, 1.0F);
                         sendConfusionParticles(target);
                     }
-//                    case 4 -> sendChatMessage(target, "Tienes que lanzar un ítem");
                     case 5 -> {
                         sendOrderTitle(target, "\u00A7dAbrir el inventario");
                         target.playSound(SoundEvents.NOTE_BLOCK_PLING, 1.0F, 1.0F);
                         sendConfusionParticles(target);
                     }
-//                    case 5 -> sendChatMessage(target, "Tienes que abrir el inventario");
                     case 6 -> {
                         sendOrderTitle(target, "\u00A7cEscribir un mensaje en el chat");
                         target.playSound(SoundEvents.NOTE_BLOCK_PLING, 1.0F, 1.0F);
                         sendConfusionParticles(target);
                     }
-//                    case 6 -> sendChatMessage(target, "Tienes que escribir un mensaje en el chat");
                 }
                 double targetPost = getPositionPlayer(target); // Sumamos las posiciones si el usaurio se a movido, seran otras posiciones
                 lastPositions.put(target.getUUID(), targetPost); // Agregamos la posicion inicial del usuario objetivo
@@ -115,7 +109,6 @@ public class SimonDiceProcedure {
                         if (target != playerSender) { // Evitar afectar al jugador que usa la varita
                             // Mostrar el tiempo restante en la barra de acción
                             target.displayClientMessage(Component.literal("\u00A7cTiempo restante: " + timeLeft + " segundos"), true);
-//                            ((ServerPlayer) target).displayClientMessage(Component.literal("Tiempo restante: " + timeLeft + "s"), true);
 
                             if (ticks >= TIME_LIMIT) {
                                 StringBuilder playerComplete = new StringBuilder();
@@ -127,17 +120,15 @@ public class SimonDiceProcedure {
                                         playerOver.append(", ");
                                     }
                                     playerOver.append(target.getName().getString());
-//                                    playerSender.displayClientMessage(Component.literal("El jugador " + target.getName().getString() + " falló la orden y recibió daño."), true);
                                 } else {
                                     if (!playerComplete.isEmpty()) {
                                         playerComplete.append(", ");
                                     }
                                     playerComplete.append(target.getName().getString());
-//                                    playerSender.displayClientMessage(Component.literal("El jugador " + target.getName().getString() + " cumplió la orden perfectamente."), true);
                                 }
                                 playerSender.displayClientMessage(Component.literal(
-                                        "Jugadores que han fallado: " + (!playerOver.isEmpty() ? playerOver.toString() : "Ninguno") +
-                                                "\nJugadores que han completado: " + (!playerComplete.isEmpty() ? playerComplete.toString() : "Ninguno")), true);
+                                        "\u00A7cJugadores que han fallado: " + (!playerOver.isEmpty() ? playerOver.toString() : "Ninguno") +
+                                                "\u00A7aJugadores que han completado: " + (!playerComplete.isEmpty() ? playerComplete.toString() : "Ninguno")), true);
                                 MinecraftForge.EVENT_BUS.unregister(this);
                             }
                         }
@@ -147,7 +138,6 @@ public class SimonDiceProcedure {
 
             @SubscribeEvent
             public void onTick(TickEvent.PlayerTickEvent event) {
-//                playerSender.displayClientMessage(Component.literal("Evento de entidad"), true);
                 if (order == 1 || order == 0 && playersToCheck.contains(event.player)) {
                     if (order == 0) {
                         // Comprovamos si el usuario se agacho
@@ -168,15 +158,13 @@ public class SimonDiceProcedure {
 
             @SubscribeEvent
             public void onPlayerSwing(PlayerInteractEvent.LeftClickEmpty event) {
-//                playerSender.displayClientMessage(Component.literal("Has pegado al aire"), true);
-                if (event.getEntity() instanceof Player && playersToCheck.contains(event.getEntity()) && order == 2) {
+                if (event.getSide().isServer() && playersToCheck.contains(event.getEntity()) && (order == 2)) {
                     playerActions.put(event.getEntity().getUUID(), true);
                 }
             }
 
             @SubscribeEvent
             public void onPlayerJump(LivingEvent.LivingJumpEvent event) {
-//                playerSender.displayClientMessage(Component.literal("Has saltado exitosamente"), true);
                 if (event.getEntity() instanceof Player && playersToCheck.contains(event.getEntity()) && order == 3) {
                     playerActions.put(event.getEntity().getUUID(), true);
                 }
@@ -184,21 +172,21 @@ public class SimonDiceProcedure {
 
             @SubscribeEvent
             public void onItemToss(ItemTossEvent event) {
-//                playerSender.displayClientMessage(Component.literal("Has tirado un ítem"), true);
                 if (order == 4 && playersToCheck.contains(event.getPlayer())) {
                     playerActions.put(event.getPlayer().getUUID(), true);
                 }
             }
             @SubscribeEvent
             public void onPlayerOpenContainer(PlayerContainerEvent.Open event) {
-//                playerSender.displayClientMessage(Component.literal("Has abierto el inventario"), true);
-                if (event.getEntity() instanceof Player && playersToCheck.contains(event.getEntity()) && order == 5) {
-                    playerActions.put(event.getEntity().getUUID(), true);
+                if (event.getEntity() instanceof ServerPlayer player && event.getContainer() instanceof InventoryMenu menu) {
+                    if ((event.getEntity() instanceof Player) && playersToCheck.contains(event.getEntity()) && (order == 5)) {
+                        player.sendSystemMessage(Component.literal("Has abierto el inventario"));
+                        playerActions.put(player.getUUID(), true);
+                    }
                 }
             }
             @SubscribeEvent
             public void onPlayerChat(ServerChatEvent event) {
-//                playerSender.displayClientMessage(Component.literal("Has escrito un mensaje en el chat"), true);
                 if (playersToCheck.contains(event.getPlayer()) && order == 6) {
                     playerActions.put(event.getPlayer().getUUID(), true);
                 }
