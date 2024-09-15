@@ -31,6 +31,9 @@ public class DobleSaltoAlSerPresionadaProcedure {
 			return;
 		if (EnchantmentHelper.getItemEnchantmentLevel(KlvModEnchantments.DOBLE_SALTO_ENCANTAMIENTO.get(), (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY)) != 0
 				|| (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY).getItem() == KlvModItems.BOTAS_AGILES_BOOTS.get()) {
+			// Verifica si esta montado en alguna entidad o vehiculo y no le permite usar la habilidad
+			if (entity.isPassenger() || entity.isVehicle()) return;
+
 			if ((new Object() {
 				public boolean checkGamemode(Entity _ent) {
 					if (_ent instanceof ServerPlayer _serverPlayer) {
