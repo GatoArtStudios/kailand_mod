@@ -5,6 +5,8 @@ import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.item.crafting.RecipeManager;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.item.crafting.SmeltingRecipe;
+import net.minecraft.world.item.enchantment.EnchantmentHelper;
+import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
@@ -17,13 +19,33 @@ import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.state.BlockState;
 
+import java.util.List;
 import java.util.Optional;
 
 public class AutoFundicionProcedureProcedure {
-	public static void execute(LevelAccessor world, double x, double y, double z) {
+	private static final List<Block> BLACKLIST_BLOCKS = List.of(
+			Blocks.REDSTONE_ORE,
+			Blocks.DEEPSLATE_REDSTONE_ORE,
+			Blocks.DIAMOND_ORE,
+			Blocks.DEEPSLATE_DIAMOND_ORE,
+			Blocks.LAPIS_ORE,
+			Blocks.DEEPSLATE_LAPIS_ORE,
+			Blocks.COAL_ORE,
+			Blocks.DEEPSLATE_COAL_ORE,
+			Blocks.NETHER_GOLD_ORE,
+			Blocks.NETHER_QUARTZ_ORE,
+			Blocks.EMERALD_ORE,
+			Blocks.DEEPSLATE_EMERALD_ORE,
+			Blocks.GILDED_BLACKSTONE
+	);
+	public static void execute(LevelAccessor world, double x, double y, double z, ItemStack itemStack) {
 		BlockPos pos = new BlockPos(x, y, z);
 		BlockState blockState = world.getBlockState(pos);
 		Block block = blockState.getBlock();
+
+		if (BLACKLIST_BLOCKS.contains(block)) {
+			return;
+		}
 
 		// Verificamos si el bloque es fundible
 		if (world instanceof ServerLevel serverLevel) {
@@ -37,12 +59,29 @@ public class AutoFundicionProcedureProcedure {
 				SmeltingRecipe smeltingRecipe = optionalRecipe.get(); // Obtenemos la receta
 				ItemStack result = smeltingRecipe.getResultItem(); // Obtenemos el resultado de la receta
 
+				// Obtenemos el nivel de fortuna del item usado para minar
+				int fornuteLevel = EnchantmentHelper.getItemEnchantmentLevel(Enchantments.BLOCK_FORTUNE, itemStack);
+				int cantidadDeItems = 1;
+				if (fornuteLevel > 0) {
+					cantidadDeItems += world.getRandom().nextInt(fornuteLevel + 1);
+				}
+
 				// Reemplazamos el bloque por aire
 				world.setBlock(pos, Blocks.AIR.defaultBlockState(), 3);
+				ItemStack drop = ItemStack.EMPTY;
+				if (block == Blocks.IRON_ORE || block == Blocks.DEEPSLATE_IRON_ORE) {
+					drop = new ItemStack(Items.IRON_INGOT, cantidadDeItems);
+				} else if (block == Blocks.GOLD_ORE || block == Blocks.DEEPSLATE_GOLD_ORE) {
+					drop = new ItemStack(Items.GOLD_INGOT, cantidadDeItems);
+				} else if (block == Blocks.COPPER_ORE || block == Blocks.DEEPSLATE_COPPER_ORE) {
+					drop = new ItemStack(Items.COPPER_INGOT, cantidadDeItems);
+				} else {
+					drop = new ItemStack(result.copy().getItemHolder(), 1);
+				}
 
 				// Crear un item en la posición
 				if (world instanceof Level _level && !_level.isClientSide()) {
-					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, result.copy());
+					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, drop);
 					entityToSpawn.setPickUpDelay(0);
 					_level.addFreshEntity(entityToSpawn);
 				}
@@ -50,16 +89,6 @@ public class AutoFundicionProcedureProcedure {
 				// Generamos particulas
 				if (world instanceof ServerLevel _level) {
 					_level.sendParticles(ParticleTypes.SMALL_FLAME, x, y, z, 10, 0.5, 0.5, 0.5, 0.1);
-				}
-
-				// Damos 1/3 de experiencia que normalmente daria un horno al fundir x bloque
-				float experience = smeltingRecipe.getExperience();
-				if (world instanceof ServerLevel _serverLevel) {
-					_serverLevel.players().forEach(player -> {
-						if (player.distanceToSqr(x, y, z) < 64) {
-							player.giveExperiencePoints((int) (experience / 3));
-						}
-					});
 				}
 			}
 		}

@@ -53,14 +53,14 @@ public class PicoKailandItem extends PickaxeItem {
 	@Override
 	public boolean mineBlock(ItemStack itemstack, Level world, BlockState blockstate, BlockPos pos, LivingEntity entity) {
 		boolean retval = super.mineBlock(itemstack, world, blockstate, pos, entity);
-		AutoFundicionProcedureProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
+		AutoFundicionProcedureProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ(), itemstack);
 		return retval;
 	}
 
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, world, list, flag);
-		list.add(Component.literal("\u00A77Este pico funde autom\u00E1ticamente los minerales al romperlos"));
+		list.add(Component.literal("\u00A77Este pico funde autom\u00E1ticamente los bloques al romperlos"));
 	}
 
 	@Override
