@@ -25,7 +25,7 @@ public class PicoKailandItem extends PickaxeItem {
 	public PicoKailandItem() {
 		super(new Tier() {
 			public int getUses() {
-				return 3500;
+				return 4200;
 			}
 
 			public float getSpeed() {
