@@ -65,7 +65,7 @@ public class ParedGloo2Procedure {
         }
 
         if (entity instanceof Player _player)
-            _player.getCooldowns().addCooldown(itemstack.getItem(), 1400);
+            _player.getCooldowns().addCooldown(itemstack.getItem(), 600);
         if (world instanceof ServerLevel _level)
             _level.sendParticles(ParticleTypes.DRAGON_BREATH, x, y, z, 195, 3, 3, 3, 0.2);
         if (world instanceof Level _level) {
@@ -93,7 +93,7 @@ public class ParedGloo2Procedure {
                     }
                 }
             }
-        }, 30, TimeUnit.SECONDS);
+        }, 29, TimeUnit.SECONDS);
     }
 
     private static boolean isReplaceable(LevelAccessor world, BlockPos pos) {
